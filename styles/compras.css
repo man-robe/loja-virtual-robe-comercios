@@ -1,0 +1,720 @@
+@charset "UTF-8";
+/* Reset CSS */
+* {
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+/* Mobile first CSS */
+body, html {
+    background-color: #161616;
+}
+
+header {
+    color: #fff;
+    background-color: #161616;
+    margin: auto;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cabeca {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
+
+h1.logo {
+
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: -5px;
+    box-shadow: 0 4px 4px #161616;
+
+}
+
+
+.conteiner {
+    width: 100%;
+    margin: auto;
+     
+}
+ 
+ 
+.ibusca {
+     display: inline-flex;
+     justify-content: center;
+     margin-bottom: 10px;
+}
+
+
+
+.preco {
+    padding: 5px;
+    font-weight:bold;
+    color: #1e8122;
+}
+
+.descricao {
+    color: #c56f00;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+main {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background-color:#161616;
+}
+
+.FormBusca {
+    display: flex;
+}
+
+.FormBusca input[type="search"] {
+    padding: 5px;
+  
+    width: 70vw;
+    border: 1px solid #292929;
+    border-radius: 5px 0 0 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.FormBusca button[type = "submit"] {
+    padding: 0px 5px;
+
+    text-align: center;
+    background-color: black;
+    color: #c56f00;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    outline: none;
+    
+}
+
+.FormBusca button[type="submit"]:hover {
+    background-color: #012122;
+}
+
+.suggestion-list {
+    display: block;
+    height: 141px;
+    width: 226px;
+    margin-top: 39px;
+}
+
+.suggestion-list {
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    margin-top: 31px;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1;
+    max-height: 120px;
+    overflow-y: auto;
+    width: calc(71% - 4px); /* Adjust for border */
+}
+
+.suggestion-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-list li:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+.pCompra {
+  
+    padding: 4px;
+    font-size: 1.2em;
+   
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: #161616;
+    color: #c56f00;
+}
+
+.pdispo {
+    
+    padding: 4px;
+    font-size: 1.2em;
+   
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #292929;
+    color: #c56f00;
+}
+
+
+
+.produto {
+    display: inline-grid;
+    align-content: center;
+    justify-content: center; 
+    align-items: stretch;
+    justify-items:center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.produto {
+    width: calc(48.33% - 19px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+   /* Adicionar margem inferior entre os produtos */
+    text-align: center; /* Alinhar o conteúdo do produto ao centro */
+    background-color: #fff; /* Cor de fundo do produto */
+    border-radius: 10px; /* Arredondar as bordas do produto */
+    padding: 10px; /* Adicionar espaçamento interno ao produto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+    transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+}
+
+
+.produto img {
+    width: 150px; /* Garantir que a imagem do produto ocupe toda a largura do produto */
+    max-width: 90%; /* Garantir que a imagem não ultrapasse a largura do produto */
+    height: auto; /* Manter a proporção da imagem */
+    border-radius: 8px;
+}
+
+.produto:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aumentar a sombra ao passar o mouse sobre o produto */
+    transform: translateY(-5px); /* Deslocar levemente o produto para cima ao passar o mouse sobre ele */
+}
+
+.produtos-disponiveis {
+    width: calc(100.33% - 0px);
+    text-align: center; 
+    background-color: #fff; /* Cor de fundo do produto */
+
+}
+
+.mais-vendidos {
+    width: calc(100.33% - 0px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+    /* Adicionar margem inferior entre os produtos */
+    text-align: center; /* Alinhar o conteúdo do produto ao centro */
+    background-color: #fff; /* Cor de fundo do produto */
+    /* Adicionar espaçamento interno ao produto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+}
+
+
+.novos-em-stock {
+    width: calc(100.33% - 0px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+    /* Adicionar margem inferior entre os produtos */
+    text-align: center; /* Alinhar o conteúdo do produto ao centro */
+    background-color: #fff; /* Cor de fundo do produto */
+   
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+footer {
+    background-color: #161616;
+    color: #fff;
+    padding: 30px 0;
+}
+
+footer h4 {
+    color: #fff;
+    text-indent: 10px;
+}
+
+footer p {
+    color: #ccc;
+    padding: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+    text-indent: 10px;
+  
+}
+
+.col-md-02 ul {
+    margin-top: 5px;
+}
+
+.col-md-02 a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+.col-md-02 a:hover {
+    color: purple;
+}
+
+.col-md-02 a:focus-within {
+    color: purple;
+    text-decoration: underline;
+}
+
+.col-md-04 {
+    height: 10vh;
+    margin-top: -10px;
+    margin-bottom: 5px;
+}
+
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a img {
+    width: 50%;
+}
+
+
+
+.social-icons li {
+    display:inline-flex;
+   
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+
+
+.footer-bottom {
+    background-color: #222;
+    padding: 20px 0;
+    margin-bottom: -28px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    text-align: center;
+}
+
+
+/*--- Media Queries --- */
+/*Para TABLET*/
+@media screen and (min-width: 768px ) and (max-width: 992px) {
+
+    .header {
+        color: #fff;
+        background-color: #161616;
+        margin: auto;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cabeca {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
+    
+    h1.logo {
+
+        font-size: 4em;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px;
+        
+    }
+
+    
+    .ibusca {
+        display: inline-flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+
+    .FormBusca input[type="search"] {
+        margin-top: 10px;
+        padding: 5px;
+        width: 70vw;
+        border: 1px solid black;
+        border-radius: 5px 0 0 2px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        outline: none;
+    }
+
+    
+    
+    .FormBusca button[type = "submit"] {
+        margin-top: 10px;
+        padding: 5px 6px;
+        text-align: center;
+        background-color: black;
+        color:#c56f00;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        outline: none;
+        
+    }
+
+    .suggestion-list {
+        list-style-type:none;
+        padding: 0;
+        margin: 0;
+        margin-top: 40px;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 1;
+        max-height: 120px;
+        overflow-y: auto;
+        width: calc(71% - 8px); /* Adjust for border */
+    }
+      
+    .pCompra {
+
+        padding: 4px;
+        font-size: 1.2em;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        background-color: #161616;
+        color: #c56f00;
+
+    }
+     
+    .pdispo{
+
+        padding: 4px;
+        font-size: 1.2em;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #292929;
+        color: #c56f00;
+    }
+
+    .produto {
+        display: inline-grid;
+        justify-content: center;
+        align-items: stretch; 
+        justify-items: center;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    .produto {
+        width: calc(24.33% - 15px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+       /* Adicionar margem inferior entre os produtos */
+        text-align: center; /* Alinhar o conteúdo do produto ao centro */
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 10px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+    }
+    
+    
+    .produto img {
+        width: 150px; /* Garantir que a imagem do produto ocupe toda a largura do produto */
+        max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do produto */
+        height: auto; /* Manter a proporção da imagem */
+        border-radius: 8px;
+    }
+
+}
+
+
+
+
+
+/*PARA DESKTOP*/
+@media screen and (min-width: 992px ) and (max-width: 1200px) {
+
+    .header {
+        color: #fff;
+        background-color: #161616;
+        margin: auto;
+        box-shadow: 0 3px 4px rgba(188, 94, 94, 0.1);
+    }
+    
+    .cabeca {
+
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
+    
+    
+    h1.logo {
+
+        font-size: 4em;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+
+
+    .FormBusca input[type="search"] {
+        padding: 5px;
+        width: 70vw;
+        border: 1px solid black;
+        border-radius: 5px 0 0 2px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        outline: none;
+    }
+    
+    .FormBusca button[type = "submit"] {
+        padding: 5px 5px;
+        text-align: center;
+        background-color: black;
+        color: #c56f00;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        outline: none;
+        
+    }
+
+    .suggestion-list {
+        list-style-type:none;
+        padding: 0;
+        margin: 0;
+        margin-top: 31px;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 1;
+        max-height: 120px;
+        overflow-y: auto;
+        width: calc(71% - 10px); /* Adjust for border */
+    }
+
+
+    .pCompra {
+
+        padding: 4px;
+        font-size: 1.2em;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        background-color: #161616;
+        color: #c56f00;
+
+    }
+     
+    .pdispo {
+
+        padding: 4px;
+        font-size: 1.2em;
+       
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #292929;
+        color: #c56f00;
+    }
+    
+    
+
+    .produto {
+        display: inline-grid;
+        justify-content: center; /* Distribuir os produtos uniformemente ao longo do eixo principal */
+        align-items: stretch; /* Alinhar os itens no topo do contêiner */
+        justify-items: center;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    
+    .produto {
+        width: calc(24.33% - 14px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+       /* Adicionar margem inferior entre os produtos */
+        text-align: center; /* Alinhar o conteúdo do produto ao centro */
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 10px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+    }
+    
+    
+    .produto img {
+        width: 150px; /* Garantir que a imagem do produto ocupe toda a largura do produto */
+        max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do produto */
+        height: auto; /* Manter a proporção da imagem */
+        border-radius: 8px;
+    }
+
+}
+
+
+
+
+/*Para GRANDES TELAS*/
+@media screen and (min-width: 1200px ) {
+
+    .header {
+        color: #fff;
+        background-color: #161616;
+        margin: auto;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cabeca {
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+    }
+    
+    h1.logo {
+
+        font-size: 4em;
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 10px;
+
+    }
+    
+
+    .FormBusca input[type="search"] {
+        padding: 8px;
+        width: 70vw;
+        border: 1px solid black;
+        border-radius: 5px 0 0 2px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        outline: none;
+    }
+
+
+    .FormBusca button[type = "submit"] {
+        padding: 8px 8px;
+        text-align: center;
+        background-color: black;
+        color: #c56f00;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        outline: none;
+        
+    }
+
+    .suggestion-list {
+        list-style-type:decimal;
+        padding: 0;
+        margin: 0;
+        margin-top: 26px;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 1;
+        max-height: 120px;
+        overflow-y: auto;
+        width: calc(71% - 15px); /* Adjust for border */
+    }
+    
+    
+    .pCompra {
+
+        
+        padding: 4px;
+        font-size: 1.2em;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        background-color: #161616;
+        color: #c56f00;
+    }
+     
+    .pdispo{
+      
+        padding: 4px;
+        font-size: 1.2em;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color: #292929;
+        color: #c56f00;
+    }
+   
+
+    .produto {
+        display: inline-grid;
+        justify-content: center;
+        align-items: center; 
+        justify-items: center;
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    .produto {
+        width: calc(24.33% - 11px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+       /* Adicionar margem inferior entre os produtos */
+        text-align: center; /* Alinhar o conteúdo do produto ao centro */
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 10px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+    }
+    
+    
+    .produto img {
+        width: 150px; /* Garantir que a imagem do produto ocupe toda a largura do produto */
+        max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do produto */
+        height: auto; /* Manter a proporção da imagem */
+        border-radius: 8px;
+    }
+}
