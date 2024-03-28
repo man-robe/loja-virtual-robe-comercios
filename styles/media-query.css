@@ -113,6 +113,7 @@
    
 
     .produto {
+        
         width: calc(24.33% - 15px);
         margin-bottom: 20px;
         margin-left: 10px;

@@ -22,6 +22,7 @@ body, html {
 }
 
 .cabeca {
+
     width: 100%;
     margin: auto;
     padding: 10px;
@@ -40,6 +41,7 @@ h1.logo {
 
 
 #burger {
+
     background-color:#161616;
     color: white;
     display: block;
@@ -123,10 +125,12 @@ main {
 }
 
 .FormBusca {
+    
     display: flex;
 }
 
 .FormBusca input[type="search"] {
+
     margin-top: -10px;
     padding: 5px;
     width: 70vw;
@@ -137,6 +141,7 @@ main {
 }
 
 .FormBusca button[type = "submit"] {
+
     margin-top: -10px;
     padding: 5px 5px;
     text-align: center;
@@ -152,10 +157,12 @@ main {
 }
 
 .FormBusca button[type="submit"]:hover {
+
     background-color: #012122;
 }
 
 .suggestion-list {
+
     display: block;
     height: 141px;
     width: 226px;
@@ -163,6 +170,7 @@ main {
 }
 
 .suggestion-list {
+
     list-style-type:none;
     padding: 0;
     margin: 0;
@@ -258,83 +266,6 @@ main {
 
 }
 
-.Tdm {
-    
-    padding:5px;
-    text-align: center;
-    font-size: 1.2em;
-    background-color: #161616;
-    color:#c56f00;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    margin: auto;
-}
-
-
-
-
-
-.produtos-destaque {
-
-    display: inline-flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    
-}
-
-.produtos-destaque img {
-
-    width: 45%;
-    margin-bottom: -5px;
-
-}
-
-.produtos-destaque {
-
-    width: calc(99.1% - 0px);
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-
-    border: 2px solid #fff;
-}
-
-.produtos-destaque {
-
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    padding: 5px;
-    margin: auto;
-    margin-top: 20px;
-  
-}
-
-.produtos-destaque:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
-}
-
-.marquee-conteiner {
-
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    border-radius: 8px;
-    scroll-behavior:smooth; /* Optional for smooth scrolling */
-    justify-content: center;
-
-}
-
-
-/*.marquee-conteiner img {
-    flex-shrink: 0;
-    margin: 0 10px;
-}
-*/
 
 
 footer {
