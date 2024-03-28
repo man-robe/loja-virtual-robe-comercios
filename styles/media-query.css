@@ -25,6 +25,7 @@
 @media screen and (min-width: 768px) and (max-width: 992px) {
     
     .header {
+        
         color: #fff;
         background-color: #161616;
         margin: auto;
@@ -90,6 +91,7 @@
 
     .pdispo{
         text-align: center;
+    
     }
 
     
@@ -221,19 +223,6 @@
     }
 
  
-
-    .Tdm {
-    
-        padding:5px;
-        text-align: center;
-        font-size: 1.3rem;
-        font-weight:bold;
-        background-color: #161616;
-        color: #c56f00;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        margin: auto;
-    }
 
     .suggestion-list {
         list-style-type:none;
@@ -379,18 +368,7 @@
     }
 
 
-    .Tdm {
-    
-        padding: 5px;
-        font-size: 1.5em;
-        text-align: center;
-        font-weight: bold;
-        background-color: #161616;
-        color: #c56f00;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        margin: auto;
-    }
+
    
     .conteiner {
 
@@ -603,19 +581,7 @@
     
     }
 
-    .Tdm {
-    
-        padding: 5px;
-        font-size: 1.7rem;
-        text-align: center;
-        font-weight: bold;
-        background-color: #161616;
-        color: #c56f00;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        margin: auto;
-    }
-
+   
     
     .FormBusca input[type="search"] {
         padding: 8px;

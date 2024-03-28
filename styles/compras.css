@@ -44,6 +44,9 @@ h1.logo {
     margin: auto;
      
 }
+
+
+
  
  
 .ibusca {
@@ -150,8 +153,8 @@ main {
    
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
     margin: auto;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     background-color: #161616;
     color: #c56f00;
 }
@@ -165,7 +168,7 @@ main {
     margin: auto;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    background-color: #292929;
+    background-color: black;
     color: #c56f00;
 }
 
@@ -233,6 +236,66 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
+
+.carousel {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel h2 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #c56f00;
+}
+
+.carousel-container {
+    display: flex;
+   
+    transition: transform 0.5s ease;
+}
+
+.carousel-container .produto {
+    flex: 0 0 auto;
+    margin: 0 10px;
+}
+
+.carousel button {
+   
+    margin-top: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #c56f00;
+}
+
+.carousel button.prev {
+    left: 0;
+}
+
+.carousel button.next {
+    right: 0;
+}
+
+
+
+.categorias{
+    margin-top: 20px;
+    color: #ccc;
+}
+
+
+
+.pagination{
+    margin-top: 20px;
+
+}
 
 footer {
     background-color: #161616;
@@ -408,9 +471,9 @@ a img {
         font-size: 1.2em;
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
         margin: auto;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        background-color: #161616;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-color:#161616;
         color: #c56f00;
 
     }
@@ -423,7 +486,7 @@ a img {
         margin: auto;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        background-color: #292929;
+        background-color: black;
         color: #c56f00;
     }
 
@@ -537,8 +600,8 @@ a img {
         font-size: 1.2em;
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
         margin: auto;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         background-color: #161616;
         color: #c56f00;
 
@@ -553,7 +616,7 @@ a img {
         margin: auto;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        background-color: #292929;
+        background-color: black;
         color: #c56f00;
     }
     
@@ -670,8 +733,8 @@ a img {
         font-size: 1.2em;
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
         margin: auto;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
         background-color: #161616;
         color: #c56f00;
     }
@@ -684,7 +747,7 @@ a img {
         margin: auto;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
-        background-color: #292929;
+        background-color: black;
         color: #c56f00;
     }
    

@@ -1,4 +1,3 @@
-
 // Lista de produtos
 const inventario = [
   {
@@ -49,8 +48,7 @@ const inventario = [
     preco: "25.000,00 kz",
     imagem: "imgs/yr2-foto-g.jpg",
   }
-]
-
+];
 
 // Função para adicionar produtos dinamicamente ao HTML
 function adicionarProdutos(categoria) {
@@ -80,45 +78,6 @@ function adicionarProdutos(categoria) {
       }
   });
 }
-
-
-
-// Função de busca
-document.addEventListener('DOMContentLoaded', function () {
-  const formBusca = document.getElementById('iFormBusca');
-  formBusca.addEventListener('submit', function (event) {
-      event.preventDefault(); // Evita o envio do formulário padrão
-      const inputBusca = document.getElementById('buscar');
-      const termoBusca = inputBusca.value.trim().toLowerCase(); // Obtém o termo de busca e limpa espaços em branco e converte para minúsculas
-
-      // Lógica de busca e exibição de resultados
-      const produtos = document.querySelectorAll('.produtos .produto'); // Supondo que cada produto tenha a classe "produto"
-      const resultadoBusca = [];
-
-      produtos.forEach(function (produto) {
-          const nomeProduto = produto.querySelector('.nome').textContent.toLowerCase(); // Supondo que o nome do produto esteja dentro de um elemento com a classe "nome"
-          const descricaoProduto = produto.querySelector('.descricao').textContent.toLowerCase(); // Supondo que a descrição do produto esteja dentro de um elemento com a classe "descricao"
-          if (nomeProduto.includes(termoBusca) || descricaoProduto.includes(termoBusca)) {
-              resultadoBusca.push(produto.outerHTML);
-          }
-      });
-
-      // Exibindo resultados da busca
-      const produtosSection = document.querySelector('.produtos');
-      produtosSection.innerHTML = resultadoBusca.length > 0 ? resultadoBusca.join('') : '<p>Nenhum resultado encontrado.</p>';
-  });
-});
-
-// Chamar a função para adicionar os produtos ao carregar a página
-window.addEventListener("load", () => {
-  adicionarProdutos("eau de parfum");
-  adicionarProdutos("skincare");
-});
-
-
-
-
-
 
 // Função para ordenar produtos por preço
 function ordenarPorPreco(categoria, ordem) {
@@ -162,14 +121,6 @@ function ordenarPorPreco(categoria, ordem) {
   });
 }
 
-
-
-
-
-
-
-
-
 // Função para exibir produtos em uma página específica
 function exibirProdutosPorPagina(categoria, paginaAtual, itensPorPagina) {
   const produtosSection = document.querySelector(".produtos");
@@ -205,44 +156,57 @@ function exibirProdutosPorPagina(categoria, paginaAtual, itensPorPagina) {
   });
 }
 
+// Função de busca
+const formBusca = document.getElementById('iFormBusca');
+formBusca.addEventListener('submit', function (event) {
+    event.preventDefault(); // Evita o envio do formulário padrão
+    const termoBusca = document.getElementById('buscar').value.trim().toLowerCase(); // Obtém o termo de busca e limpa espaços em branco e converte para minúsculas
+
+    // Filtrar produtos que correspondem ao termo de busca
+    const produtosFiltrados = inventario.filter(produto => {
+        const nomeProduto = produto.nome.toLowerCase(); // Convertendo o nome do produto para minúsculas
+        const descricaoProduto = produto.descricao.toLowerCase(); // Convertendo a descrição do produto para minúsculas
+        return nomeProduto.includes(termoBusca) || descricaoProduto.includes(termoBusca);
+    });
+
+    // Exibir resultados da busca
+    const produtosSection = document.querySelector('.produtos');
+    produtosSection.innerHTML = produtosFiltrados.length > 0 ? 
+        produtosFiltrados.map(produto => `
+            <section class="produto" id="produto-${inventario.indexOf(produto) + 1}">
+                <picture>
+                    <img src="${produto.imagem}" alt="${produto.nome}">
+                </picture>
+                <h4 class="nome">${produto.nome}</h4>
+                <p class="descricao">${produto.descricao}</p>
+                <p class="preco">${produto.preco}</p>
+            </section>
+        `).join('') :
+        '<p>Nenhum resultado encontrado.</p>';
+});
+
+// Chamar a função para adicionar os produtos ao carregar a página
+window.addEventListener("load", () => {
+  adicionarProdutos("eau de parfum");
+  adicionarProdutos("skincare");
+});
+
+ordenarPorPreco("eau de parfum", "asc");
+exibirProdutosPorPagina("eau de parfum", 1, 4); 
+// Exibir os produtos da categoria "eau de parfum" na página 1, com 4 itens por página
 
 
 
 
 
-// Função para filtrar produtos por faixa de preço
-function filtrarPorFaixaDePreco(categoria, precoMinimo, precoMaximo) {
-  const produtosSection = document.querySelector(".produtos");
 
-  // Limpar a seção de produtos
-  produtosSection.innerHTML = '';
 
-  // Filtrar produtos de acordo com a faixa de preço especificada
-  const produtosFiltrados = inventario.filter(produto => produto.descricao === categoria && parseFloat(produto.preco.replace(/[^\d.-]/g, '')) >= precoMinimo && parseFloat(produto.preco.replace(/[^\d.-]/g, '')) <= precoMaximo);
 
-  // Adicionar produtos filtrados à seção de produtos
-  produtosFiltrados.forEach((produto) => {
-      // Criar uma nova seção para o produto
-      const produtoSection = document.createElement("section");
-      produtoSection.classList.add("produto");
 
-      // Adicionar um ID único para cada seção de produto
-      produtoSection.id = `produto-${inventario.indexOf(produto) + 1}`;
 
-      // Criar a estrutura HTML para o produto
-      produtoSection.innerHTML = `
-          <picture>
-              <img src="${produto.imagem}" alt="${produto.nome}">
-          </picture>
-          <h4 class="nome">${produto.nome}</h4>
-          <p class="descricao">${produto.descricao}</p>
-          <p class="preco">${produto.preco}</p>
-      `;
 
-      // Adicionar o produto à seção de produtos
-      produtosSection.appendChild(produtoSection);
-  });
-}
+
+
 
 
 
