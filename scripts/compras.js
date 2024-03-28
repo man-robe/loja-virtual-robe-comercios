@@ -1,6 +1,7 @@
 // Função para adicionar produtos dinamicamente em uma seção específica
 // Array de objetos contendo informações sobre os produtos
 var produtosDisponiveis = [
+
     { nome: "Antonio Bandeiras", imagem: "../imgs/ab-foto-g.jpg", descricao: " eau de parfum ", preco: "10.000,00 kz", },
     { nome: "Dolores Femme", imagem: "../imgs/dlr2-foto-g.jpg", descricao: " eau de parfum ", preco: "10.000,00 kz", },
     { nome: "Gentle Magic", imagem: "../imgs/gm2-foto-g.jpg", descricao: " skincare serum ", preco: "10.000,00 kz", },
@@ -69,22 +70,3 @@ adicionarProdutosNaSecao(produtosDisponiveis, '.produtos-disponiveis');
 adicionarProdutosNaSecao(maisVendidos, '.mais-vendidos');
 adicionarProdutosNaSecao(NovosEmStock, '.novos-em-stock');
 
-
-
-
-
-/*Funcão para buscar e mostrar resultados */
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**Função para a lista de sugestão/ */
