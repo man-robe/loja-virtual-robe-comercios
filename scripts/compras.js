@@ -4,21 +4,36 @@ var produtosDisponiveis = [
     { nome: "Antonio Bandeiras", imagem: "../imgs/ab-foto-g.jpg", descricao: " eau de parfum ", preco: "10.000,00 kz" },
     { nome: "Dolores Femme", imagem: "../imgs/dlr2-foto-g.jpg", descricao: " eau de parfum ", preco: "15.000,00 kz" },
     { nome: "Gentle Magic", imagem: "../imgs/gm2-foto-g.jpg", descricao: " skincare serum ", preco: "20.000,00 kz" },
-    { nome: "Bebeauty", imagem: "../imgs/bb-foto-g.jpg", descricao: " skincare gel ", preco: "31.000,00 kz" }
+    { nome: "Bebeauty", imagem: "../imgs/bb-foto-g.jpg", descricao: " skincare gel ", preco: "31.000,00 kz" },
 ];
 
 var maisVendidos = [
     { nome: "Zara Man", imagem: "../imgs/zr-foto-g.jpg", descricao: " eau de parfum ", preco: "9.000,00 kz" },
+    { nome: "Gentle Magic", imagem: "../imgs/gm2-foto-g.jpg", descricao: " skincare serum ", preco: "10.000,00 kz" },
+    { nome: "Antonio Bandeiras", imagem: "../imgs/ab-foto-g.jpg", descricao: " eau de parfum ", preco: "10.000,00 kz" },
+    { nome: "Bebeauty", imagem: "../imgs/bb-foto-g.jpg", descricao: " skincare gel ", preco: "31.000,00 kz" },
+    { nome: "Dolores Femme", imagem: "../imgs/dlr2-foto-g.jpg", descricao: " eau de parfum ", preco: "15.000,00 kz" },
     { nome: "Yves Rocher 2", imagem: "../imgs/yr2-foto-g.jpg", descricao: " skincare creme ", preco: "8.000,00 kz" },
-    { nome: "Lookit", imagem: "../imgs/lk-foto-g.jpg", descricao: " eau de parfum ", preco: "40.000,00 kz" },
-    { nome: "Gentle Magic", imagem: "../imgs/gm2-foto-g.jpg", descricao: " skincare serum ", preco: "10.000,00 kz" }
+    { nome: "Yves Rocher", imagem: "../imgs/yr-foto-g.jpg", descricao: " skincare creme ", preco: "8.000,00 kz" },
+    { nome: "Zara Man 2", imagem: "../imgs/zr2-foto-g.jpg", descricao: " eau de parfum ", preco: "13.000,00 kz" },
 ];
 
 var novosEmStock = [
-    { nome: "Yves Rocher", imagem: "../imgs/yr-foto-g.jpg", descricao: "skincare creme ", preco: "7.000,00 kz" },
+    { nome: "Yves Rocher 2", imagem: "../imgs/yr2-foto-g.jpg", descricao: " skincare creme ", preco: "8.000,00 kz" },
     { nome: "Yves Rocher", imagem: "../imgs/yr-foto-g.jpg", descricao: " skincare creme ", preco: "8.000,00 kz" },
     { nome: "Zara Man 2", imagem: "../imgs/zr2-foto-g.jpg", descricao: " eau de parfum ", preco: "13.000,00 kz" },
-    { nome: "Bebeauty", imagem: "../imgs/bb-foto-g.jpg", descricao: " skincare gel ", preco: "16.000,00 kz" }
+    { nome: "Bebeauty", imagem: "../imgs/bb-foto-g.jpg", descricao: " skincare gel ", preco: "16.000,00 kz" },
+];
+
+
+var emDestaque = [
+    
+    { nome: "Gentle Magic", imagem: "../imgs/gm2-foto-g.jpg", descricao: " skincare serum ", preco: "10.000,00 kz" },
+    { nome: "Antonio Bandeiras", imagem: "../imgs/ab-foto-g.jpg", descricao: " eau de parfum ", preco: "10.000,00 kz" },
+    { nome: "Bebeauty", imagem: "../imgs/bb-foto-g.jpg", descricao: " skincare gel ", preco: "31.000,00 kz" },
+    { nome: "Dolores Femme", imagem: "../imgs/dlr2-foto-g.jpg", descricao: " eau de parfum ", preco: "15.000,00 kz" },
+    { nome: "Yves Rocher 2", imagem: "../imgs/yr2-foto-g.jpg", descricao: " skincare creme ", preco: "8.000,00 kz" },
+    { nome: "Zara Man 2", imagem: "../imgs/zr2-foto-g.jpg", descricao: " eau de parfum ", preco: "13.000,00 kz" },
 ];
 
 
@@ -111,39 +126,43 @@ document.getElementById('iFormBusca').addEventListener('submit', function(event)
 
 
 
-// Adicionar produtos mais vendidos ao carrossel
+// Adicionar produtos em destaque ao carrossel
 function adicionarProdutosMaisVendidos(produtos, containerClass) {
     var carouselContainer = document.querySelector(containerClass);
     produtos.forEach(function(produto) {
         var divProduto = document.createElement('div');
-        divProduto.classList.add('produto');
+        divProduto.classList.add('destaque');
 
-        // Crie os elementos de imagem, título, etc., e adicione-os a divProduto
-        // Crie os elementos de imagem, título, descrição e preço
+        // Crie os elementos de imagem, título, descrição e preço e adicione-os a divProduto
         var imagemProduto = document.createElement('img');
         imagemProduto.src = produto.imagem;
         imagemProduto.alt = produto.nome;
 
         var tituloProduto = document.createElement('h3');
         tituloProduto.textContent = produto.nome;
+        tituloProduto.classList.add('h3')
+       
 
         var descricaoProduto = document.createElement('p');
         descricaoProduto.textContent = produto.descricao;
-
+        descricaoProduto.classList.add('descricao')
+        
         var precoProduto = document.createElement('p');
         precoProduto.textContent = produto.preco;
+        precoProduto.classList.add('preco')
 
         // Adicione os elementos à divProduto
         divProduto.appendChild(imagemProduto);
         divProduto.appendChild(tituloProduto);
-        divProduto.appendChild(descricaoProduto);
-        divProduto.appendChild(precoProduto);
+        
+
 
         carouselContainer.appendChild(divProduto);
+
     });
 }
 
-adicionarProdutosMaisVendidos(maisVendidos, '.carousel-container');
+adicionarProdutosMaisVendidos(emDestaque, '.carousel-container');
 
 // Funcionalidade do Carrossel
 var carousel = document.querySelector('.carousel-container');
@@ -154,7 +173,7 @@ var slideWidth = carousel.offsetWidth;
 var slideIndex = 0;
 
 function slide(direction) {
-    if (direction === 'next' && slideIndex < (carousel.children.length - 1)) {
+    if (direction === 'next' && slideIndex < (carousel.children.length - 2.)) {
         slideIndex++;
     } else if (direction === 'prev' && slideIndex > 0) {
         slideIndex--;
@@ -170,6 +189,7 @@ prevBtn.addEventListener('click', function() {
 nextBtn.addEventListener('click', function() {
     slide('next');
 });
+
 
 
 // Função para filtrar produtos por categoria

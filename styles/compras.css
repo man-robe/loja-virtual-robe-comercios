@@ -50,8 +50,6 @@ h1.logo {
 
 
 
- 
- 
 .ibusca {
 
     display: inline-flex;
@@ -201,16 +199,6 @@ main {
 
 }
 
-.produto {
-    width: calc(48.33% - 19px); /* Definir a largura de cada produto (ajustável conforme necessário) */
-   /* Adicionar margem inferior entre os produtos */
-    text-align: center; /* Alinhar o conteúdo do produto ao centro */
-    background-color: #fff; /* Cor de fundo do produto */
-    border-radius: 10px; /* Arredondar as bordas do produto */
-    padding: 10px; /* Adicionar espaçamento interno ao produto */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
-    transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
-}
 
 
 .produto img {
@@ -232,6 +220,17 @@ main {
 
 }
 
+.produtos-disponiveis .produto {
+    width: calc(48.33% - 19px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+    text-align: center; /* Alinhar o conteúdo do produto ao centro */
+    background-color: #fff; /* Cor de fundo do produto */
+    border-radius: 10px; /* Arredondar as bordas do produto */
+    padding: 10px; /* Adicionar espaçamento interno ao produto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+    transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+}
+
+
 .mais-vendidos {
     width: calc(100.33% - 0px); /* Definir a largura de cada produto (ajustável conforme necessário) */
     /* Adicionar margem inferior entre os produtos */
@@ -240,6 +239,18 @@ main {
     /* Adicionar espaçamento interno ao produto */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
 }
+
+.mais-vendidos .produto {
+    width: calc(48.33% - 19px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+   /* Adicionar margem inferior entre os produtos */
+    text-align: center; /* Alinhar o conteúdo do produto ao centro */
+    background-color: #fff; /* Cor de fundo do produto */
+    border-radius: 10px; /* Arredondar as bordas do produto */
+    padding: 10px; /* Adicionar espaçamento interno ao produto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+    transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+}
+
 
 
 .novos-em-stock {
@@ -251,12 +262,26 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
+.novos-em-stock .produto {
+    width: calc(48.33% - 19px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+   /* Adicionar margem inferior entre os produtos */
+    text-align: center; /* Alinhar o conteúdo do produto ao centro */
+    background-color: #fff; /* Cor de fundo do produto */
+    border-radius: 10px; /* Arredondar as bordas do produto */
+    padding: 10px; /* Adicionar espaçamento interno ao produto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+    transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+}
+
+
 
 .carousel {
-    width: 80%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
     position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .carousel h2 {
@@ -264,22 +289,69 @@ main {
     margin-top: 10px;
     margin-bottom: 10px;
     color: #c56f00;
+
+}
+
+.h3 {
+
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
 }
 
 .carousel-container {
-    display: flex;
-   
+    display: inline-flex;
     transition: transform 0.5s ease;
+    align-content: center;
+    align-items: stretch;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
-.carousel-container .produto {
-    flex: 0 0 auto;
-    margin: 0 10px;
+
+
+
+
+
+.destaque {
+    display: flex;
+    transition: transform 0.5s ease;
+    align-content: center;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+
+.destaque {
+    width: calc(48.33% - 19px);
+    text-align: center;
+    
+    background-color: #fff; /* Cor de fundo do produto */
+    border-radius: 10px; /* Arredondar as bordas do produto */
+    padding: 5px; /* Adicionar espaçamento interno ao produto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+    transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.destaque img {
+    max-width: 37vw;
+    border-radius: 8px;
+
 }
 
 .carousel button {
    
-    margin-top: 25px;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -291,24 +363,30 @@ main {
 }
 
 .carousel button.prev {
-    left: 0;
+    left: 0%;
+    
 }
 
 .carousel button.next {
-    right: 0;
+    right: 0%;
 }
 
 
 
-.categorias{
+.categorias {
     margin-top: 20px;
+    margin-bottom: 20px;
     color: #ccc;
 }
 
-
+#filtro-categoria {
+    background-color: #ede9e9;
+    
+}
 
 .pagination{
     margin-top: 20px;
+    margin-bottom: 20px;
 
 }
 
@@ -515,7 +593,7 @@ a img {
         margin-left: 10px;
     }
     
-    .produto {
+   .produtos-disponiveis .produto {
         width: calc(24.33% - 15px); /* Definir a largura de cada produto (ajustável conforme necessário) */
        /* Adicionar margem inferior entre os produtos */
         text-align: center; /* Alinhar o conteúdo do produto ao centro */
@@ -525,6 +603,28 @@ a img {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
         transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
     }
+
+    .mais-vendidos .produto {
+        width: calc(24.33% - 15px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+       /* Adicionar margem inferior entre os produtos */
+        text-align: center; /* Alinhar o conteúdo do produto ao centro */
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 10px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+    }
+
+    .novos-em-stock .produto {
+        width: calc(24.33% - 15px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+        text-align: center; /* Alinhar o conteúdo do produto ao centro */
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 5px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+    }
+    
     
     
     .produto img {
@@ -532,6 +632,63 @@ a img {
         max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do produto */
         height: auto; /* Manter a proporção da imagem */
         border-radius: 8px;
+    }
+
+
+    .carousel {
+
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .carousel-container {
+
+        display: flex;
+        transition: transform 0.5s ease;
+        align-content: center;
+        align-items: stretch;
+        justify-content: center;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+
+    }
+
+    .destaque {
+        display: flex;
+        transition: transform 0.5s ease;
+        align-content: center;
+        align-items: stretch;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+    }
+    
+   
+    .destaque {
+        width: calc(48.33% - 19px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+       /* Adicionar margem inferior entre os produtos */
+        text-align: center;
+        
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 5px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .destaque img {
+        max-width: 20vw;
+
     }
 
 }
@@ -643,13 +800,34 @@ a img {
         align-items: stretch; /* Alinhar os itens no topo do contêiner */
         justify-items: center;
         margin-top: 10px;
-        margin-right: 10px;
-        margin-left: 10px;
+       
     }
 
     
-    .produto {
-        width: calc(24.33% - 14px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+    .produtos-disponiveis .produto {
+        width: calc(22.33% - 3px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+       /* Adicionar margem inferior entre os produtos */
+        text-align: center; /* Alinhar o conteúdo do produto ao centro */
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 10px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+    }
+
+    .mais-vendidos .produto {
+        width: calc(22.33% - 3px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+       /* Adicionar margem inferior entre os produtos */
+        text-align: center; /* Alinhar o conteúdo do produto ao centro */
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 10px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+    }
+
+    .novos-em-stock .produto {
+        width: calc(22.33% - 3px); /* Definir a largura de cada produto (ajustável conforme necessário) */
        /* Adicionar margem inferior entre os produtos */
         text-align: center; /* Alinhar o conteúdo do produto ao centro */
         background-color: #fff; /* Cor de fundo do produto */
@@ -667,8 +845,62 @@ a img {
         border-radius: 8px;
     }
 
-}
+    
+    .carousel {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        padding: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 
+    .carousel-container {
+
+        display: flex;
+        transition: transform 0.5s ease;
+        align-content: center;
+        align-items: stretch;
+        justify-content: center;
+       
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .destaque {
+        display: flex;
+        transition: transform 0.5s ease;
+        align-content: center;
+        align-items: stretch;
+        justify-content: center;
+        
+    }
+    
+
+    
+    .destaque {
+        width: calc(48.33% - 19px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+       /* Adicionar margem inferior entre os produtos */
+        text-align: center;
+        
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 5px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+   .destaque img {
+    max-width: 15vw;
+    
+    }
+
+}
 
 
 
@@ -754,7 +986,7 @@ a img {
         color: #c56f00;
     }
      
-    .pdispo{
+    .pdispo {
       
         padding: 4px;
         font-size: 1.2em;
@@ -777,7 +1009,29 @@ a img {
         margin-left: 10px;
     }
     
-    .produto {
+    .produtos-disponiveis .produto {
+        width: calc(24.33% - 11px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+       /* Adicionar margem inferior entre os produtos */
+        text-align: center; /* Alinhar o conteúdo do produto ao centro */
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 10px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+    }
+
+    .mais-vendidos .produto {
+        width: calc(24.33% - 11px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+       /* Adicionar margem inferior entre os produtos */
+        text-align: center; /* Alinhar o conteúdo do produto ao centro */
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 10px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+    }
+
+    .novos-em-stock .produto {
         width: calc(24.33% - 11px); /* Definir a largura de cada produto (ajustável conforme necessário) */
        /* Adicionar margem inferior entre os produtos */
         text-align: center; /* Alinhar o conteúdo do produto ao centro */
@@ -795,4 +1049,56 @@ a img {
         height: auto; /* Manter a proporção da imagem */
         border-radius: 8px;
     }
+
+    
+    .carousel {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      
+    }
+
+    .carousel-container {
+        display: flex;
+        transition: transform 0.5s ease;
+        align-content: center;
+        align-items: stretch;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    .destaque {
+        display: flex;
+        transition: transform 0.5s ease;
+        align-content: center;
+        align-items: stretch;
+        justify-content: center;
+      
+        
+    }
+
+    
+    .destaque {
+        width: calc(48.33% - 19px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+       /* Adicionar margem inferior entre os produtos */
+        text-align: center;
+        
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 5px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .destaque img {
+        max-width: 15vw;
+    }
+
 }
