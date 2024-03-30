@@ -276,6 +276,7 @@ main {
 
 
 .carousel {
+    height: 51vh;
     width: 100%;
     margin: auto;
     overflow: hidden;
@@ -311,7 +312,16 @@ main {
     border-radius: 10px;
 }
 
+.carousel-container {
 
+    position: absolute;
+    
+    top: 20%;
+    left: 3%;
+
+    transform: translate(-50% -50%);
+    
+}
 
 
 
@@ -350,8 +360,7 @@ main {
 
 .carousel button {
    
-    margin-top: 12.5px;
-    margin-bottom: 12.5px;
+    margin-top: 20.5px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -636,7 +645,7 @@ a img {
 
 
     .carousel {
-
+        height: 46vh;
         width: 80%;
         margin: auto;
         overflow: hidden;
@@ -648,7 +657,7 @@ a img {
 
     .carousel-container {
 
-        display: flex;
+        display: inline-flex;
         transition: transform 0.5s ease;
         align-content: center;
         align-items: stretch;
@@ -658,6 +667,28 @@ a img {
         margin-bottom: 10px;
         border-radius: 10px;
 
+    }
+
+    .carousel-container {
+
+    position: absolute;
+    top: 20%;
+    left: 1%;
+    transform: translate(-50% -50%);
+    
+    }
+
+    .carousel button {
+   
+    margin-top: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #c56f00;
     }
 
     .destaque {
@@ -847,6 +878,8 @@ a img {
 
     
     .carousel {
+
+        height: 52vh;
         width: 80%;
         margin: auto;
         overflow: hidden;
@@ -858,7 +891,7 @@ a img {
 
     .carousel-container {
 
-        display: flex;
+        display: inline-flex;
         transition: transform 0.5s ease;
         align-content: center;
         align-items: stretch;
@@ -869,6 +902,33 @@ a img {
         margin-bottom: 10px;
         border-radius: 10px;
     }
+
+    .carousel-container {
+
+    position: absolute;
+    
+    top: 23%;
+    left: 1%;
+
+    transform: translate(-50% -50%);
+    
+    }
+
+    
+    .carousel button {
+   
+    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #c56f00;
+    }
+
+
 
     .destaque {
         display: flex;
@@ -1052,6 +1112,7 @@ a img {
 
     
     .carousel {
+        height: 51vh;
         width: 80%;
         margin: auto;
         overflow: hidden;
@@ -1070,6 +1131,31 @@ a img {
         margin-top: 10px;
         margin-bottom: 10px;
         border-radius: 10px;
+    }
+
+    .carousel-container {
+
+        position: absolute;
+        
+        top: 20%;
+        left: 1%;
+
+        transform: translate(-50% -50%);
+    
+    }
+
+    
+    .carousel button {
+   
+    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #c56f00;
     }
 
     .destaque {
