@@ -7,7 +7,7 @@ const inventario = [
     imagem: "imgs/ab-foto-g.jpg",
   },
   {
-    nome: "Dolores Femme",
+    nome: "Dolores P. Femme",
     descricao: "eau de parfum",
     preco: "20.000,00 kz",
     imagem: "imgs/dlr-foto-g.jpg",

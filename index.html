@@ -17,8 +17,9 @@
             <i id="burger" class="material-icons" onclick="clickMenu()">menu</i>
             <menu class="menu" id="itens">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pag-menu/compras.html">Compras</a></li>
+                    <li><a href="pag-menu/disponiveis.html" target="_blank" referrerpolicy="noreferrer">Disponíveis para comprar</a></li>
+                    <li><a href="pag-menu/mais-vendidos.html" target="_blank" referrerpolicy="noreferrer">Mais Vendidos</a></li>
+                    <li><a href="pag-menu/novos-em-stock.html" target="_blank" referrerpolicy="noreferrer">Novos em Stock</a></li>
                     <li><a href="pag-menu/contato.html">Contato</a></li>
                     <li><a href="pag-menu/sobre.html">Sobre</a></li>
                 </ul>
@@ -30,7 +31,7 @@
             <div class="ibusca">
                 <form action="" method="post" class="FormBusca" id="iFormBusca">
                     <label for="buscar"></label>
-                    <input type="search" name="busca" id="buscar" placeholder="Procurar..." autocomplete="off">
+                    <input type="search" name="busca" id="buscar" placeholder="procurar..." autocomplete="off">
                     <button type="submit" id="btnbusca">Buscar</button>
                     <ul id="suggestionList" class="suggestion-list"> </ul> <!-- Área da lista de sugestão -->
                 </form>
@@ -39,7 +40,23 @@
            <section class="produtos">
 
            </section>
-           
+
+           <div class="categorias">
+                
+            <label for="filtro-categoria">Filtrar por Categorias :</label>
+            <select id="filtro-categoria">
+                <option value="todos"> Todos </option>
+                <option value="perfumes">perfumes</option>
+                <option value="skincare">skincare</option>
+            </select>
+
+             
+            <div class="paginacao">
+                <button class="proxima"><a href="pag-menu/disponiveis.html" target="_self" referrerpolicy="noreferrer">Próxima &gt;&gt;</a></button>
+            </div>
+
+        </div>
+
         </div>
     </main>
     <footer>

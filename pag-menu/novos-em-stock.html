@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compras - ROBÉ-COMÉRCIOS</title>
+    <title>Novos em Stock - ROBÉ-COMÉRCIOS</title>
     <link rel="shortcut icon" href="../icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../styles/compras.css">
-    <script src="../scripts/compras.js" defer></script>
+    <link rel="stylesheet" href="../styles/novos-em-stock.css">
+    <script src="../scripts/novos-em-stock.js" defer></script>
 
 </head>
 <body>
@@ -18,62 +18,51 @@
         </div>
     </header>
     <main>
-       
         <div class="conteiner">
                 
             <div class="ibusca">
                 <form action="" method="post" class="FormBusca" id="iFormBusca">
                     <label for="buscar"></label>
-                    <input type="search" name="busca" id="buscar" placeholder="Procurar..."  autocomplete="off" >
+                    <input type="search" name="busca" id="buscar" placeholder="pesquisar..."  autocomplete="off" >
                     <button type="submit" id="btnbusca">Buscar</button>
-                    <ul id="suggestionList" class="suggestion-list"></ul> <!-- area da lista de sugestão -->
                 
                 </form>
             </div>
-
-            <h2 class="pCompra">Disponíveis</h2>
-            <section class="produtos-disponiveis">
+            <div>
+                <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+                <menu class="menu" id="itens">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../pag-menu/disponiveis.html">Produtos disponíveis</a></li>
+                        <li><a href="../pag-menu/mais-vendidos.html">Mais Vendidos</a></li>
+                        <li><a href="../pag-menu/contato.html">Contato</a></li>
+                        <li><a href="../pag-menu/sobre.html">Sobre</a></li>
+                    </ul>
+                </menu>
+            </div>
+            <h2 class="titulo">Novos em stock</h2>
+            <section class="NovosEmStock">
                
             </section>
 
-           
-            <h2 class="pdispo">Mais vendidos</h2>
-            <section class="mais-vendidos">
+            <div class="categorias">
+                
+                <label for="filtro-categoria">Filtrar por Categoria :</label>
+                <select id="filtro-categoria">
+                    <option value="todos">Todos </option>
+                    <option value="perfumes">perfumes</option>
+                    <option value="skincare">skincare</option>
+                </select>
 
-            </section>
-           
-
-            <h2 class="pdispo">Novos em stock</h2>
-            <section class="novos-em-stock">
-
-            </section>
-
-            <section class="carousel">
-                <h2> Em Destaque </h2>
-                <div class="carousel-container">
-                    <!-- Aqui vão os produtos mais vendidos -->
-                </div>
-                    <button class="prev">&#10094;</button>
-                    <button class="next">&#10095;</button>
-            </section>
+            </div>
 
            
-        <div class="categorias">
-            <label for="filtro-categoria">Filtrar por Categoria:</label>
-            <select id="filtro-categoria">
-                <option value="todos">Todos</option>
-                <option value="perfumes">Perfumes</option>
-                <option value="cosmeticos">Cosméticos</option>
-                <!-- Adicione outras opções de categoria conforme necessário -->
-            </select>
+            <div class="paginacao">
+                <button class="anterior"><a href="mais-vendidos.html" target="_self" referrerpolicy="noreferrer">&lt;&lt; Anterior</a></button>
+              
+            </div>
+            
         </div>
-
-        <div class="pagination">
-            <button class="prev-page">&laquo; Anterior</button>
-            <span class="page-numbers"></span>
-            <button class="next-page">Próximo &raquo;</button>
-        </div>
-    </div>
     </main>
     <footer>
         <div class="contentor01">
@@ -85,9 +74,12 @@
                 <div class="col-md-02">
                     <h4>Links Rápidos</h4>
                     <ul>
-                        <li><a href="../index.html" target="_parent" rel="noopener" referrerpolicy="noreferrer">Home</a></li>
-                        <li><a href="../pag-menu/contato.html" target="_self" rel="noreferrer">Contato</a></li>
-                        <li><a href="../pag-menu/sobre.html" target="_self" rel="noreferrer">Sobre</a></li>
+                        <li><a href="../index.html" target="_parent" referrerpolicy="noreferrer">Home</a></li>
+                        <li><a href="../pags-extra/disponiveis.html" target="_self">Disponíveis</a></li>
+                        <li><a href="../pags-extra/mais-vendidos.html" target="_self">Mais vendidos</a></li>
+                        <li><a href="../pags-extra/novos-em-stock.html" target="_self">Novos em stock</a></li>
+                        <li><a href="../pags-extra/" target="_self">Contato</a></li>
+                        <li><a href="../pags-extra/sobre.html" target="_self">Sobre</a></li>
                     </ul>
                 </div>
                 <div class="col-md-03">

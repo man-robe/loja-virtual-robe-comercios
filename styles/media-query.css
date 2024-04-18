@@ -27,7 +27,7 @@
     .header {
         
         color: #fff;
-        background-color: #161616;
+        background-color: #0a0a0a;
         margin: auto;
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
     }
@@ -45,7 +45,6 @@
         font-size: 4em;
         text-align: center;
         padding: 20px;
-        margin-bottom: 10px;
         
     }
 
@@ -70,33 +69,43 @@
 
 
     .menu ul li a {
-        
-        display: inline-block;
+        display: block;
+        padding: 8px;
         text-decoration: none;
         text-align: center;
-        background-color: black;
-        color: #fff;
-        border-radius: 7px;
-        border-top: unset;
+        background-color:#161616;
+        color:#fc9c1f;
         margin-right: 5px;
-        margin-left: 5px;
-        padding: 8px;
+        border-bottom: unset;
+        border-top:unset;
+        border-radius: 8px;
     }
-
+    
     .menu ul li a:hover {
-
-        transition-duration:unset;
-       
-    }
-
-    .pdispo{
-        text-align: center;
+        color:#f77331;
+        background-color:black;
+        border-radius: 8px;
     
     }
+
+
+    menu ul li a:active {
+        color: yellow;
+    }
+    
+  
+    
+    menu ul li a:focus {
+        background-color: #cc4400;
+        border-radius: 8px;
+        
+    
+    }
+
 
     
     .produtos {
-        width: calc(100.33% - 4px);
+        width: calc(100% - 0px);
         background-color: #fff;
         border-radius: unset;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -127,7 +136,7 @@
     }
 
     .produto img {
-        width: 115px; /* Garantir que a imagem do produto ocupe toda a largura do produto */
+        width: 150px; /* Garantir que a imagem do produto ocupe toda a largura do produto */
         max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do produto */
         height: auto; /* Manter a proporção da imagem */
         border-radius: 8px;
@@ -145,7 +154,7 @@
         width: 100%;
         margin: auto;
         text-align: center;
-        background-color: #161616;
+        background-color: #0a0a0a;
     }
 
     .sobre-section {
@@ -156,7 +165,7 @@
 
     .descricao {
 
-        color:rgb(212, 120, 1);
+        color:#f77331;
         font-size: 1rem;
     
     }
@@ -177,27 +186,28 @@
     .ibusca {
         display: flex;
         justify-content: center;
-        margin-bottom: 10px;
+    
     }
 
-    
+
+
     .FormBusca input[type="search"] {
-        margin-top: 10px;
-        padding: 5px;
-        width: 70vw;
+        margin-top: -10px;
+        padding: 5px 8px;
+        width: 81vw;
         border: 1px solid black;
-        border-radius: 5px 0 0 2px;
+        border-radius: 8px 0 0 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         outline: none;
     }
 
 
     .FormBusca button[type = "submit"] {
-        margin-top: 10px;
-        padding: 5px 6px;
+        margin-top: -10px;
+        padding: 5px 8px;
         text-align: center;
         background-color: black;
-        color:#c56f00;
+        color: #f0f0f0;;
         border: none;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -212,14 +222,14 @@
 
         padding: 5px;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         font-weight:bold;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
         margin: auto;
-        background-color: #161616;
-        color: #c56f00;
+        background-color: #0a0a0a;
+        color:#f77331;
         
     }
 
@@ -273,23 +283,43 @@
     .menu {
         display: block;
         text-align: center;
-        margin-bottom: 20px;
         padding: 10px;
     }
 
 
+    
     .menu ul li a {
-
-        display: inline-block;
+        display: block;
+        padding: 8px;
         text-decoration: none;
         text-align: center;
-        padding: 10px;
-        margin-right: 8px;
-        margin-left: 8px;
+        background-color:#161616;
+        color:#fc9c1f;
+        margin-right: 5px;
+        border-bottom: unset;
         border-top:unset;
-        border-radius: 7px;
-        background-color: black;
-        color: #fff;
+        border-radius: 8px;
+    }
+    
+    .menu ul li a:hover {
+        color:#f77331;
+        background-color:black;
+        border-radius: 8px;
+    
+    }
+
+
+    menu ul li a:active {
+        color: yellow;
+    }
+    
+  
+    
+    menu ul li a:focus {
+        background-color: #cc4400;
+        border-radius: 8px;
+        
+    
     }
 
 
@@ -303,7 +333,7 @@
 
     header {
 
-        background-color: #161616;
+        background-color: #0a0a0a;
         color: #fff;
         
     }
@@ -312,7 +342,6 @@
     .cabeca {
 
         width: 100%;
-        margin: auto;
         padding: 10px;
     }
 
@@ -322,12 +351,10 @@
         font-size: 4em;
         text-align: center;
         padding: 20px;
-        margin-bottom: 10px;
+       
     }
 
-    .pdispo {
-        text-align: center;
-    }
+    
        
 
     main {
@@ -335,7 +362,7 @@
         width: 100%;
         margin: auto;
         text-align: center;
-        background-color: #161616;
+        background-color: #0a0a0a;
         border-radius: 0px;
         
     }
@@ -343,7 +370,7 @@
    
     .descricao {
 
-        color:rgb(212, 120, 1);
+        color:#f77331;
         font-size: 1.1em;
         
     }
@@ -363,8 +390,8 @@
         border-top-right-radius: 5px;
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
         margin: auto;
-        background-color: #161616;
-        color:#c56f00;
+        background-color: #0a0a0a;
+        color:#f77331;
     
     }
 
@@ -381,25 +408,26 @@
     .ibusca {
         display: flex;
         justify-content: center;
-        margin-bottom: 20px;
     }
 
     
     .FormBusca input[type="search"] {
-        padding: 8px;
-        width: 70vw;
+        margin-top: -10px;
+        padding: 5px 8px;
+        width: 81vw;
         border: 1px solid black;
-        border-radius: 5px 0 0 2px;
+        border-radius: 8px 0 0 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         outline: none;
     }
 
 
     .FormBusca button[type = "submit"] {
-        padding: 8px 8px;
+        margin-top: -10px;
+        padding: 5px 8px;
         text-align: center;
         background-color: black;
-        color: #c56f00;
+        color:#f0f0f0;
         border: none;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -417,7 +445,7 @@
     }
 
     .produtos {
-        width: calc(100.33% - 4px); 
+        width: calc(100% - 0px); 
         text-align: center; 
         background-color: #fff; 
         border-radius:unset; 
@@ -470,16 +498,7 @@
         width: calc(71% - 11px); /* Adjust for border */
     }
 
-    .produtos-destaque {
-        width: calc(99.1% - 0px);
-    }
-
-    .produtos-destaque img {
-
-        width: 150px;
-        max-width: 100%;
-    }
-
+   
 
 }
   
@@ -503,7 +522,7 @@
   
     header {
 
-        background-color: #161616;
+        background-color: #0a0a0a;
         color: #fff;   
     }
 
@@ -512,7 +531,6 @@
         font-size: 4em;
         text-align: center;
         padding: 20px;
-        margin-bottom: 10px;
 
     }
 
@@ -526,25 +544,43 @@
 
         display: block;
         text-align:center;
-        margin-bottom: 20px;
         padding: 10px;
     }
 
+  
     .menu ul li a {
-
-        display: inline-block;
+        display: block;
+        padding: 8px;
         text-decoration: none;
         text-align: center;
-        padding: 10px;
-        margin-right: 10px;
-        margin-left: 10px;
-        color: #fff;
+        background-color:#161616;
+        color:#fc9c1f;
+        margin-right: 5px;
+        border-bottom: unset;
         border-top:unset;
-        border-radius: 7px;
+        border-radius: 8px;
+    }
+    
+    .menu ul li a:hover {
+        color:#f77331;
         background-color:black;
+        border-radius: 8px;
+    
     }
 
-   
+
+    menu ul li a:active {
+        color: yellow;
+    }
+    
+  
+    
+    menu ul li a:focus {
+        background-color: #cc4400;
+        border-radius: 8px;
+        
+    
+    }
 
 
     .menu > ul > li {
@@ -564,41 +600,43 @@
     .ibusca {
         display: flex;
         justify-content: center;
-        margin-bottom: 20px;
+  
     }
 
     
     .pPrin {
       
         padding: 5px;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: bold;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
         margin: auto;
-        background-color: #161616;
-        color:#c56f00;
+        background-color: #0a0a0a;
+        color:#f77331;
     
     }
 
    
     
     .FormBusca input[type="search"] {
-        padding: 8px;
-        width: 70vw;
+        margin-top: -10px;
+        padding: 5px 8px;
+        width: 81vw;
         border: 1px solid black;
-        border-radius: 5px 0 0 2px;
+        border-radius: 8px 0 0 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         outline: none;
     }
 
 
     .FormBusca button[type = "submit"] {
-        padding: 8px 8px;
+        margin-top: -10px;
+        padding: 5px 8px;
         text-align: center;
         background-color: black;
-        color: #c56f00;
+        color:#f0f0f0;
         border: none;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -614,7 +652,7 @@
         width: 100%;
         margin: auto;
         text-align: center;
-        background-color: #161616;
+        background-color: #0a0a0a;
         border-radius: 0px;
      
     }
@@ -626,7 +664,7 @@
    
     .descricao {
 
-        color:rgb(212, 120, 1);;
+        color:#f77331;
         font-size: 1.1em;
        
     }
@@ -640,7 +678,7 @@
 
 
     .produtos {
-        width: calc(100.33% - 5px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+        width: calc(100% - 0px); /* Definir a largura de cada produto (ajustável conforme necessário) */
         text-align: center; /* Alinhar o conteúdo do produto ao centro */
         background-color: #fff; /* Cor de fundo do produto */
         border-radius: 0px; /* Arredondar as bordas do produto */
@@ -696,15 +734,5 @@
         max-height: 120px;
         overflow-y: auto;
         width: calc(71% - 15px); /* Adjust for border */
-    }
-
-
-   
-    .produtos-destaque {
-        width: calc(99.1% - 0px);
-    }
-
-    .produtos-destaque img {
-        width: 15%;
     }
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais Vendidos - ROBÉ-COMÉRCIOS</title>
+    <link rel="shortcut icon" href="../icons/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/mais-vendidos.css">
+    <script src="../scripts/mais-vendidos.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="cabeca">
+            <h1 class="logo">ROBÉ-COMÉRCIOS</h1>
+        </div>
+    </header>
+    <main>
+        <div class="conteiner">
+            <div class="ibusca">
+                <form action="" method="post" class="FormBusca" id="iFormBusca">
+                    <label for="buscar"></label>
+                    <input type="search" name="busca" id="buscar" placeholder="pesquisar..." >
+                    <button type="submit" id="btnbusca1">Buscar</button>
+                    <ul class="lista-sugestoes"></ul>
+                </form>
+            </div>
+            <div>
+                <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+                <menu class="menu" id="itens">
+                    <ul>
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="../pag-menu/novos-em-stock.html">Novos em Stock</a></li>
+                        <li><a href="../pag-menu/disponiveis.html"> Produtos disponíveis</a></li>
+                        <li><a href="../pag-menu/contato.html">Contato</a></li>
+                        <li><a href="../pag-menu/sobre.html">Sobre</a></li>
+                    </ul>
+                </menu>
+            </div>
+            <h2 class="titulo">Mais Vendidos</h2>
+            <section class="mais-vendidos"></section>
+            <section class="carousel">
+                <h2>Destaques</h2>
+                <div class="carousel-container"></div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </section>
+            <div class="categorias">
+                <label for="filtro-categoria">Filtrar por Categoria :</label>
+                <select id="filtro-categoria">
+                    <option value="todos">Todos</option>
+                    <option value="perfumes">Perfumes</option>
+                    <option value="skincare">Skincare</option>
+                </select>
+            </div>
+            <div class="paginacao">
+                <button class="anterior"><a href="disponiveis.html" target="_self" referrerpolicy="noreferrer">&lt;&lt; Anterior</a></button>
+                <button class="proxima"><a href="novos-em-stock.html" target="_blank" referrerpolicy="noreferrer">Próxima &gt;&gt;</a></button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contentor01">
+            <div class="linha01">
+                <div class="col-md-01">
+                    <h4>Sobre Nós</h4>
+                    <p>Tudo o que precisa em um único lugar. | Missão, visão, e valores.</p>
+                </div>
+                <div class="col-md-02">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="../index.html" target="_parent" rel="noreferrer">Home</a></li>
+                        <li><a href="../pags-extra/disponiveis.html" target="_self">Disponíveis</a></li>
+                        <li><a href="../pags-extra/mais-vendidos.html" target="_self">Mais Vendidos</a></li>
+                        <li><a href="../pags-extra/novos-em-stock.html" target="_self">Novos em Stock</a></li>
+                        <li><a href="../pags-extra/" target="_self">Contato</a></li>
+                        <li><a href="../pags-extra/sobre.html" target="_self">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-03">
+                    <h4>Siga-nos</h4>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/man.rhobe/" class="facebook" target="_blank" rel="noreferrer"><img src="../icons/icone-facebook.png" alt="Facebook"></a></li>
+                        <li><a href="https://twitter.com/_Man_robe_" class="twitter" target="_blank" rel="noreferrer"><img src="../icons/icone-twitter.png" alt="Twitter"></a></li>
+                        <li><a href="https://www.instagram.com/_man.robe_/" class="instagram" target="_blank" rel="noreferrer"><img src="../icons/icone-instagram.png" alt="Instagram"></a></li>
+                        <li><a href="https://github.com/man-robe/" class="github" target="_blank" rel="noreferrer"><img src="../icons/icone-github.png" alt="GitHub"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="contentor02">
+                <div class="linha02">
+                    <div class="col-md-04">
+                        <p>&copy; 2024 ROBÉ-COMÉRCIOS. <br> Todos os direitos reservados. <br> | Designed by Man Robé |</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

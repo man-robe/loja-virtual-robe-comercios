@@ -11,12 +11,12 @@
 
 /* Mobile first CSS */
 body, html {
-    background-color: #161616;
+    background-color: #0a0a0a;
 }
 
 .header {
     color: #fff;
-    background-color: #161616;
+    background-color: #0a0a0a;
     margin: auto;
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
 }
@@ -35,14 +35,14 @@ h1.logo {
     font-size: 3em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-bottom: -5px;
-    box-shadow: 0 4px 4px #161616;
+    box-shadow: 0 4px 4px #0a0a0a;
 
 }
 
 
 #burger {
 
-    background-color:#161616;
+   
     color: white;
     display: block;
     text-align: center;
@@ -65,8 +65,7 @@ h1.logo {
 .menu {
    
     display: none;
-    padding-top: 10px;
-    margin-top: -5px;
+    
     
 }
 
@@ -79,22 +78,39 @@ h1.logo {
 .menu ul li a {
     display: block;
     padding: 10px;
+    margin-top: 5px;
     text-decoration: none;
     text-align: center;
-    background-color:#161616;
-    color: #fff;
+    background-color:black;
+    color:#f0f0f0;
 
-    border-top: 2px solid #c56f00;
+    border-bottom: 1px solid #f77331;
+    border-top: 1px solid #f77331;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .menu ul li a:hover {
 
-    color:#c56f00;
+    color:black;
+    background-color: #f77331;
+    border-radius: 20px;
+
+}
+
+.menu ul li a:active {
+
+    color:rgb(219, 219, 4);
 
 }
 
 menu ul li a:focus-within {
-    color: #c56f00;
+    color:black;
+    background-color: #f77331;
+    border-radius: 20px;
+    
 
 }
 
@@ -112,6 +128,7 @@ menu ul li a:focus-within {
 .ibusca {
     display: inline-flex;
     justify-content: center;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -121,7 +138,7 @@ main {
     width: 100%;
     margin: auto;
     text-align: center;
-    background-color:#161616;
+    background-color:#0a0a0a;
 }
 
 .FormBusca {
@@ -129,13 +146,18 @@ main {
     display: flex;
 }
 
+::placeholder {
+    font-style: italic;
+    text-indent: 5px;
+}
+
 .FormBusca input[type="search"] {
 
     margin-top: -10px;
     padding: 5px;
-    width: 70vw;
+    width: 81vw;
     border: 1px solid black;
-    border-radius: 5px 0 0 2px;
+    border-radius: 8px 0 0 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     outline: none;
 }
@@ -146,7 +168,7 @@ main {
     padding: 5px 5px;
     text-align: center;
     background-color:black;
-    color: #c56f00;
+    color:#f0f0f0;
     border: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -158,7 +180,7 @@ main {
 
 .FormBusca button[type="submit"]:hover {
 
-    background-color: #012122;
+    color:#ffa42e;
 }
 
 .suggestion-list {
@@ -198,7 +220,7 @@ main {
 }
 
 .produtos {
-    width: calc(100.33% - 4px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+    width: calc(100% - 0px); /* Definir a largura de cada produto (ajustável conforme necessário) */
     text-align: center; /* Alinhar o conteúdo do produto ao centro */
     background-color: #fff; /* Cor de fundo do produto*/
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
@@ -245,7 +267,7 @@ main {
 }
 
 .descricao {
-    color: #c56f00;
+    color:#c74200;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -261,9 +283,71 @@ main {
     margin: auto;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background-color: #161616;
-    color: #c56f00;
+    background-color: #0a0a0a;
+    color:#f77331;
 
+}
+
+
+
+
+
+#filtro-categoria {
+    margin-top: 10px;
+    text-align: center;
+    background-color: black;
+    color:#fc9c1f;
+    border:none;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+label {
+    padding: 4px;
+    text-align: center;
+    color: #ccc;
+}
+
+option {
+    color:#fc9c1f;
+    background-color: black;
+    padding: 5px;
+    
+}
+
+
+
+.paginacao {
+    margin-top: 20px;
+    text-align: center;
+   
+}
+
+
+.proxima, .anterior {
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+    margin-bottom: 10px;
+    background-color: rgb(40, 40, 40);
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+      
+  }
+  
+  
+.proxima a, .anterior a {
+    text-align: center;
+    text-decoration: none;
+    
+    color:#ccc;
+    padding: 5px;
+}
+  
+
+.proxima a:hover, .anterior a:hover {
+    color:#fc9c1f;
+  
 }
 
 
