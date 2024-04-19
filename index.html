@@ -14,16 +14,18 @@
     <header class="header">
         <div class="cabeca">
             <h1 class="logo">ROBÉ-COMÉRCIOS</h1>
-            <i id="burger" class="material-icons" onclick="clickMenu()">menu</i>
-            <menu class="menu" id="itens">
-                <ul>
-                    <li><a href="pag-menu/disponiveis.html" target="_blank" referrerpolicy="noreferrer">Disponíveis para comprar</a></li>
-                    <li><a href="pag-menu/mais-vendidos.html" target="_blank" referrerpolicy="noreferrer">Mais Vendidos</a></li>
-                    <li><a href="pag-menu/novos-em-stock.html" target="_blank" referrerpolicy="noreferrer">Novos em Stock</a></li>
-                    <li><a href="pag-menu/contato.html">Contato</a></li>
-                    <li><a href="pag-menu/sobre.html">Sobre</a></li>
-                </ul>
-            </menu>
+            <div>
+                <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+                <menu class="menu" id="itens">
+                    <ul>
+                        <li><a href="pag-menu/disponiveis.html" target="_blank" referrerpolicy="noreferrer">Disponíveis para comprar</a></li>
+                        <li><a href="pag-menu/mais-vendidos.html" target="_blank" referrerpolicy="noreferrer">Mais Vendidos</a></li>
+                        <li><a href="pag-menu/novos-em-stock.html" target="_blank" referrerpolicy="noreferrer">Novos em Stock</a></li>
+                        <li><a href="pag-menu/contato.html">Contato</a></li>
+                        <li><a href="pag-menu/sobre.html">Sobre</a></li>
+                    </ul>
+                </menu>
+            </div>
         </div>
     </header>
     <main>
@@ -31,7 +33,7 @@
             <div class="ibusca">
                 <form action="" method="post" class="FormBusca" id="iFormBusca">
                     <label for="buscar"></label>
-                    <input type="search" name="busca" id="buscar" placeholder="procurar..." autocomplete="off">
+                    <input type="search" name="busca" id="buscar" placeholder="pesquisar..." autocomplete="off">
                     <button type="submit" id="btnbusca">Buscar</button>
                     <ul id="suggestionList" class="suggestion-list"> </ul> <!-- Área da lista de sugestão -->
                 </form>

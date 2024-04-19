@@ -44,11 +44,11 @@
 
         font-size: 4em;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
         
     }
 
-    #burger {
+    #burguer {
         display: none;
     }
 
@@ -165,7 +165,7 @@
 
     .descricao {
 
-        color:#f77331;
+        color:#c74200;
         font-size: 1rem;
     
     }
@@ -229,7 +229,7 @@
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
         margin: auto;
         background-color: #0a0a0a;
-        color:#f77331;
+        color:#fd712c;
         
     }
 
@@ -275,7 +275,7 @@
 /*  Configurações para DESKTOP  */
 @media screen and (min-width: 992px) and (max-width: 1200px) {
     
-    #burger {
+    #burguer {
         display: none;
     }
 
@@ -350,7 +350,7 @@
 
         font-size: 4em;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
        
     }
 
@@ -370,7 +370,7 @@
    
     .descricao {
 
-        color:#f77331;
+        color:#c74200;
         font-size: 1.1em;
         
     }
@@ -391,7 +391,7 @@
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
         margin: auto;
         background-color: #0a0a0a;
-        color:#f77331;
+        color:#fd712c;
     
     }
 
@@ -507,7 +507,7 @@
 /*  Configurações de tela para GRANDES TELAS  */
 @media screen and (min-width: 1200px) {
 
-    #burger {
+    #burguer {
 
         display: none;
     }
@@ -530,7 +530,7 @@
 
         font-size: 4em;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
 
     }
 
@@ -614,7 +614,7 @@
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
         margin: auto;
         background-color: #0a0a0a;
-        color:#f77331;
+        color:#fd712c;
     
     }
 
@@ -664,7 +664,7 @@
    
     .descricao {
 
-        color:#f77331;
+        color:#c74200;
         font-size: 1.1em;
        
     }

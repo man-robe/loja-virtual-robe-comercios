@@ -34,17 +34,15 @@ h1.logo {
     text-align: center;
     font-size: 3em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin-bottom: -5px;
     box-shadow: 0 4px 4px #0a0a0a;
 
 }
 
 
-#burger {
+#burguer {
 
-   
-    color: white;
     display: block;
+    color: white;
     text-align: center;
     margin-left: 85px;
     margin-right: 85px;
@@ -56,7 +54,7 @@ h1.logo {
     border-bottom-right-radius: 15px;
 }
 
-#burger:hover {
+#burguer:hover {
     background-color:#999999;
     color: black;
 }
@@ -75,17 +73,20 @@ h1.logo {
 }
 
 
+
 .menu ul li a {
     display: block;
     padding: 10px;
-    margin-top: 5px;
+    margin-top: 10px;
+   
+    margin-bottom: 10px;
     text-decoration: none;
     text-align: center;
     background-color:black;
-    color:#f0f0f0;
+    color:white;
 
-    border-bottom: 1px solid #f77331;
-    border-top: 1px solid #f77331;
+    border-bottom: 1px solid #ff5500;
+    border-top: 1px solid #ff5500;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
@@ -95,7 +96,7 @@ h1.logo {
 .menu ul li a:hover {
 
     color:black;
-    background-color: #f77331;
+    background-color: #f25304;
     border-radius: 20px;
 
 }
@@ -108,7 +109,7 @@ h1.logo {
 
 menu ul li a:focus-within {
     color:black;
-    background-color: #f77331;
+    background-color: #ff5500;
     border-radius: 20px;
     
 
@@ -284,7 +285,7 @@ main {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: #0a0a0a;
-    color:#f77331;
+    color:#fd712c;
 
 }
 

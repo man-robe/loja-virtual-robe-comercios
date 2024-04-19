@@ -1,272 +1,329 @@
-/*  Para Mobile Fisrt */
+@charset "UTF-8";
+/* Reset CSS */
+* {
 
-/* Estilos para o layout geral */
-
-*{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+
 }
 
-body {
-
-    background-color:#161616;
-   
+/* Mobile first CSS */
+body, html {
+    background-color: #0a0a0a;
 }
 
 .header {
     color: #fff;
-
-}
-
-.header .cabeca {
-    display: block;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
     background-color: #0a0a0a;
+    margin: auto;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
 }
 
-.header .logo {
+.cabeca {
+
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
+
+h1.logo {
 
     text-align: center;
-    font-size: 2.5em;
-    padding: 10px;
-    margin-bottom: -20px;
-    
+    font-size: 3em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 0 4px 4px #0a0a0a;
+
 }
+
+
 
 #burguer {
 
     display: block;
-    text-align: center;
-    cursor: pointer;
     color: white;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 85px;
+    margin-right: 85px;
+    padding: 10px;
+    cursor: pointer;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 
 #burguer:hover {
-
-    background-color:#222;
+    background-color:#999999;
     color: black;
- 
 }
 
 
-
-
 .menu {
-
+   
     display: none;
-    margin-top: 5px;
-    text-align: center;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #0a0a0a;
+    
+    
 }
 
 .menu ul {
     list-style-type: none;
+    
 }
 
 
 .menu ul li a {
-
     display: block;
-    margin-top: 5px;
-    padding: 10px; /* Ajuste o padding conforme necessário */
-    background-color: black;
-    text-decoration: none;
-    color:white;
-    border-radius: 5px;
-    outline: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Adicione uma transição suave */
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
    
+    text-decoration: none;
+    text-align: center;
+    background-color:black;
+    color:white;
+
+    border-bottom: 1px solid #ff5500;
+    border-top: 1px solid #ff5500;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
-
-
-
-
 
 .menu ul li a:hover {
 
-    color:#FF950E;
-    transition:  ease .4s;
+    color:black;
+    background-color: #f25304;
+    border-radius: 20px;
+
+}
+
+.menu ul li a:active {
+
+    color:rgb(219, 219, 4);
+
+}
+
+menu ul li a:focus-within {
+    color:black;
+    background-color:#ff5500;
+    border-radius: 20px;
+    
+
 }
 
 
-
-
-.main {
-
-    padding: 20px;
-   
-  
-}
 
 .conteiner {
-    max-width: 100vw;
-    margin: 0 auto;
-    background-color: #0a0a0a;
-    margin-top: 10px;
-
+   width: 100%;
+   margin: auto;
+   margin-top: -1px;
     
 }
+
 
 .ibusca {
-    padding: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-    margin: auto;
-    background-color: #0a0a0a;
-    
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
 
+main {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background-color:#0a0a0a;
+}
+
+.FormBusca {
+    
+    display: flex;
+}
 
 ::placeholder {
-    color:rgb(173, 173, 173);
     font-style: italic;
-    text-indent: 4px;
-  
+    text-indent: 5px;
 }
 
+.FormBusca input[type="search"] {
 
-
-.ibusca input[type="search"] {
-
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 284px;
+    margin-top: -10px;
     padding: 5px;
-    border:none;
-    border-radius: 7px 4px 4px 7px;
+    width: 81vw;
+    border: 1px solid black;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.FormBusca button[type = "submit"] {
+
+    margin-top: -10px;
+    padding: 5px 5px;
+    text-align: center;
+    background-color:black;
+    color:#f0f0f0;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    outline: none;
     
 }
 
+.FormBusca button[type="submit"]:hover {
 
-
-
-.produtos {
-    
-    align-items: stretch;
-    justify-items: center;
-    justify-content: space-around;
-    margin: auto;
-   
+    color:#ffa42e;
 }
 
+.suggestion-list {
 
-
-.produto {
-
-    display: inline-grid;
-    align-items: stretch;
-    justify-items: center;
-    justify-content: space-around;
-    margin: auto;
+    display: block;
+    height: 141px;
+    width: 226px;
+    margin-top: 39px;
 }
 
+.suggestion-list {
+
+    list-style-type:none;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1;
+    max-height: 120px;
+    overflow-y: auto;
+    width: calc(71% - 4px); /* Adjust for border */
+}
+
+.suggestion-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestion-list li:hover {
+    background-color: #f0f0f0;
+}
 
 .NovosEmStock {
-
-    text-align: center;
-    width: calc(100% - 0px); 
-    background-color: white;
-
+    width: calc(100% - 0px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+    text-align: center; /* Alinhar o conteúdo do produto ao centro */
+    background-color: #fff; /* Cor de fundo do produto*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
 }
 
-
+.produto {
+    display: inline-grid;
+    justify-content: space-around; 
+    align-items:stretch; 
+}
 
 .produto {
-
-    width: calc(42.33% - -2px); 
+    width: calc(49.33% - 20px);
     margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 12px;
-    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 10px; 
+    margin-left: 11px;
+    margin-right: 11px;
     text-align: center; 
     background-color: #fff; 
     border-radius: 10px; 
-    padding: 10px;
+  
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    transition: all 0.3s ease;
-
+    transition: all 0.3s ease; 
 }
-
+.produto img {
+    width: 150px; /* Garantir que a imagem do produto ocupe toda a largura do produto */
+    max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do produto */
+    height: auto; /* Manter a proporção da imagem */
+    border-radius: 10px;
+}
 
 .produto:hover {
-    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aumentar a sombra ao passar o mouse sobre o produto */
+    transform: translateY(-5px); /* Deslocar levemente o produto para cima ao passar o mouse sobre ele */
 }
 
 
-img {
-    width: 150px;
-    max-width: 90%;
-    height: auto;
-    border-radius: 10px;
+
+.preco {
+    padding: 5px;
+    font-weight:bold;
+    color: #1e8122;
+}
+
+.descricao {
+    color:#c74200;
+    margin-top: 5px;
     margin-bottom: 5px;
 }
 
 
 
 .titulo {
-    
+    width: 100%;
+    padding: 5px;
+    font-size: 1.2em;
+   
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #0a0a0a;
+    color:#fd712c;
+
+}
+
+
+
+
+
+#filtro-categoria {
+    margin-top: 10px;
     text-align: center;
-    padding: 10px;
-    color: #FF950E;
-    background-color:#0a0a0a;
+    background-color: black;
+    color:#fc9c1f;
+    border:none;
     border-radius: 5px;
-    margin-top: 20px;
-
+    padding: 4px;
 }
 
-.nome {
-    font-size: 18px;
-    margin-bottom: 5px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    
-}
-
-.descricao {
-
-    color: #098108;
-    font-size: 1em;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
-.categoria {
-
-    color: #b15b00;
-    padding: 5px;
-   
-}
-
-.preco {
-    margin-bottom: 5px;
-    padding: 5px;
-    font-weight: bold;
-    color: #098108;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-
-.categorias {
+label {
+    padding: 4px;
     text-align: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
     color: #ccc;
-    
-   
 }
 
+option {
+    color:#fc9c1f;
+    background-color: black;
+    padding: 5px;
+    
+}
 
 
 
 .paginacao {
+    margin-top: 20px;
     text-align: center;
    
 }
@@ -294,64 +351,13 @@ img {
   
 
 .proxima a:hover, .anterior a:hover {
-    color:#FF950E;
+    color:#fc9c1f;
   
 }
 
 
 
-label {
-    padding: 4px;
-    text-align: center;
-}
 
-#filtro-categoria {
-    text-align: center;
-    background-color: black;
-    color: #FF950E;
-    border:none;
-    border-radius: 5px;
-    padding: 4px;
-}
-
-option {
-    background-color: black;
-    padding: 5px;
-    
-}
-
-/* Estilos para os botões */
-
-.FormBusca button[type="submit"] {
-    padding: 5px 10px; /* Ajuste o padding conforme necessário */
-    background-color: black;
-    color: #FF950E;
-    border: 1px solid black;
-    border-radius: 5px; /* Adicione uma borda arredondada */
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Adicione uma transição suave */
-}
-
-.ibusca button:hover,
-.FormBusca button[type="submit"]:hover,
-.prev:hover,
-.next:hover {
-    background-color: #FF950E; /* Altera a cor de fundo ao passar o mouse */
-    color: black; /* Altera a cor do texto ao passar o mouse */
-}
-
-.ibusca button:focus,
-.menu ul li a:focus,
-.FormBusca button[type="submit"]:focus {
-    border-color: #FF950E; /* Altera a cor da borda ao receber foco */
-    box-shadow: 0 0 0 2px rgba(229, 129, 0, 0.5); /* Adiciona uma borda ao receber foco */
-}
-
-
-
-
-/* Estilos para o footer */
 
 footer {
     background-color: #161616;
@@ -442,53 +448,105 @@ a img {
 }
 
 
-/* Estilos para a responsividade */
 
 
-/*  PARA TABLET   */
-@media  screen and (min-width: 768px) and (max-width: 992px) {
+/*
+    CSS para todos os dispositivos 
 
-    #burguer {
+    Typical device Breakpoints 
+    -----------------------------
+    pequenas telas: até 600px
+    celular: de 600px até 768px
+    Tablet: 768 até 992px
+    Desktop: 992px até 1200px
+    Grandes Telas: acima de 1200px
 
-        display: none;
+*/
+
+
+/*  Configurações de tela para TABLETS  */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    
+    .header {
+        
+        color: #fff;
+        background-color: #0a0a0a;
+        margin: auto;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .menu {
-        display: block;
-        margin-bottom: 20px;
+    .cabeca {
+
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+
     }
 
-    .menu > ul > li {
-        display: inline-block;
-    }
+    h1.logo {
 
-    
-    
-    
-
-    .ibusca input[type="search"] {
-        margin-top: -10px;
-        width: 600px;
-        padding: 5px;
-        border: 1px solid #E37F01;
-        border-radius: 7px 4px 4px 7px;
+        font-size: 4em;
+        text-align: center;
+        padding: 20px;
         
     }
 
+    #burguer {
+        display: none;
+    }
+
+
+
+
+    .menu {
+        display: block;
+        text-align: center;
+        padding: 10px;
+
+    }
+
+
+    .menu ul li {
+        display: inline-block;
+    }
+
+
     .menu ul li a {
-        margin-top: -10px;
-        background-color: black;
+        display: block;
+        padding: 8px;
         text-decoration: none;
-        color:white;
-        border-radius: 5px;
-        outline: none;
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Adicione uma transição suave */
-       
+        text-align: center;
+        background-color:#161616;
+        color:#fc9c1f;
+        margin-right: 5px;
+        border-bottom: unset;
+        border-top:unset;
+        border-radius: 8px;
     }
     
+    .menu ul li a:hover {
+        color: #f25304;
+        background-color:black;
+        border-radius: 8px;
     
+    }
 
 
+    menu ul li a:active {
+        color: yellow;
+    }
+    
+  
+    
+    menu ul li a:focus {
+        background-color: #cc4400;
+        border-radius: 8px;
+        
+    
+    }
+
+
+    
     .NovosEmStock {
         width: calc(100% - 0px);
         background-color: #fff;
@@ -498,7 +556,6 @@ a img {
 
     
     .produto {
-
         display:inline-grid;
         justify-content: space-around; 
         align-items: center;
@@ -509,7 +566,7 @@ a img {
 
     .produto {
         
-        width: calc(23.33% - 8px);
+        width: calc(24.33% - 15px);
         margin-bottom: 20px;
         margin-left: 10px;
         margin-right: 10px;
@@ -522,20 +579,17 @@ a img {
     }
 
     .produto img {
-        width: 150px; 
-        max-width: 100%; 
-        height: auto; 
+        width: 150px; /* Garantir que a imagem do produto ocupe toda a largura do produto */
+        max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do produto */
+        height: auto; /* Manter a proporção da imagem */
         border-radius: 8px;
     }
 
     .produto:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-        transform: translateY(-5px); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aumentar a sombra ao passar o mouse sobre o produto */
+        transform: translateY(-5px); /* Deslocar levemente o produto para cima ao passar o mouse sobre ele */
     }
 
-
-    
-   
 
 
     main {
@@ -543,7 +597,7 @@ a img {
         width: 100%;
         margin: auto;
         text-align: center;
-        background-color: #161616;
+        background-color: #0a0a0a;
     }
 
     .sobre-section {
@@ -554,6 +608,7 @@ a img {
 
     .descricao {
 
+        color:#c74200;
         font-size: 1rem;
     
     }
@@ -564,6 +619,12 @@ a img {
         font-size: 1em;
     }
 
+    .conteiner {
+
+        width: 100%;
+        margin: auto;
+            
+    }
 
     .ibusca {
         display: flex;
@@ -571,105 +632,140 @@ a img {
     
     }
 
-    .ibusca {
-        padding: 20px;
-        margin-bottom: 20px;
+
+
+    .FormBusca input[type="search"] {
+        margin-top: -10px;
+        padding: 5px 8px;
+        width: 81vw;
+        border: 1px solid black;
+        border-radius: 8px 0 0 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        outline: none;
+    }
+
+
+    .FormBusca button[type = "submit"] {
+        margin-top: -10px;
+        padding: 5px 8px;
         text-align: center;
-        margin: auto;
-        background-color: #0a0a0a;
+        background-color: black;
+        color: #f0f0f0;;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        outline: none;
         
     }
-    
-
 
 
     .titulo {
 
-        padding: 10px;
+        padding: 5px;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight:bold;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
-
         margin: auto;
         background-color: #0a0a0a;
-        color: #FF950E;
+        color:#fd712c;
         
     }
 
-  
+ 
 
-
-    
-    /* Estilos para os botões */
-    .ibusca button,
-    .FormBusca button[type="submit"] {
-        padding: 5px 10px; /* Ajuste o padding conforme necessário */
-        background-color: black;
-        color: #FF950E;
-        border: 1px solid black;
-        border-radius: 5px; /* Adicione uma borda arredondada */
-        cursor: pointer;
-        outline: none;
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Adicione uma transição suave */
+    .suggestion-list {
+        list-style-type:none;
+        padding: 0;
+        margin: 0;
+        margin-top: 40px;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 1;
+        max-height: 120px;
+        overflow-y: auto;
+        width: calc(71% - 8px); /* Adjust for border */
     }
 
-
-
     
+
+
 }
 
 
 
 
-
-
-
-
-/*  PARA DESKTOP  */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-
-   
+/*  Configurações para DESKTOP  */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    
     #burguer {
-
         display: none;
     }
 
+
     .menu {
         display: block;
-    }
-
-    .menu {
         text-align: center;
         padding: 10px;
-        margin-bottom: 20px;
+    }
+
+
+    
+    .menu ul li a {
+        display: block;
+        padding: 8px;
+        text-decoration: none;
+        text-align: center;
+        background-color:#161616;
+        color:#fc9c1f;
+        margin-right: 5px;
+        border-bottom: unset;
+        border-top:unset;
         border-radius: 8px;
-        background-color: #0a0a0a;
-     }
+    }
+    
+    .menu ul li a:hover {
+        color:#f77331;
+        background-color:black;
+        border-radius: 8px;
+    
+    }
+
+
+    menu ul li a:active {
+        color: yellow;
+    }
+    
+  
+    
+    menu ul li a:focus {
+        background-color: #cc4400;
+        border-radius: 8px;
+        
+    
+    }
+
+
+
 
     .menu > ul > li {
+
         display: inline-block;
     }
 
-    .menu ul li a {
-
-        margin-top: -10px;
-        background-color: black;
-        text-decoration: none;
-        color:white;
-        border-radius: 5px;
-        outline: none;
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Adicione uma transição suave */
-       
-    }
-
-    
 
     header {
 
-        background-color: #161616;
+        background-color: #0a0a0a;
         color: #fff;
         
     }
@@ -678,7 +774,6 @@ a img {
     .cabeca {
 
         width: 100%;
-        margin: auto;
         padding: 10px;
     }
 
@@ -688,43 +783,93 @@ a img {
         font-size: 4em;
         text-align: center;
         padding: 20px;
-        margin-bottom: 10px;
-    }
-
-
-
-    .ibusca input[type="search"] {
-        margin-top: -10px;
-        width: 600px;
-        padding: 5px;
-        border: 1px solid #E37F01;
-        border-radius: 7px 4px 4px 7px;
-        
-    }
-    
-    
-    
-    .ibusca button {
-        padding: 6px 7px;
-        border-radius: 3px 10px 9px 3px;
        
     }
 
-    .ibusca {
-        padding: 20px;
-        margin-bottom: 20px;
-        text-align: center;
+    
+       
+
+    main {
+        
+        width: 100%;
         margin: auto;
+        text-align: center;
         background-color: #0a0a0a;
+        border-radius: 0px;
         
     }
 
-    .ibusca button:hover {
-        color: #FF950E;
+   
+    .descricao {
+
+        color:#c74200;
+        font-size: 1.1em;
+        
     }
 
-  
+    .preco {
+
+        padding: 10px;
+        font-size: 1.1em;
+
+    }
+
+    .titulo {
+        padding: 5px;
+        font-size: 1.4rem;
+        font-weight:bold;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+        margin: auto;
+        background-color: #0a0a0a;
+        color:#fd712c;
     
+    }
+
+
+
+   
+    .conteiner {
+
+        width: 100%;
+        margin: auto;
+        
+    }
+
+    .ibusca {
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    .FormBusca input[type="search"] {
+        margin-top: -10px;
+        padding: 5px 8px;
+        width: 81vw;
+        border: 1px solid black;
+        border-radius: 8px 0 0 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        outline: none;
+    }
+
+
+    .FormBusca button[type = "submit"] {
+        margin-top: -10px;
+        padding: 5px 8px;
+        text-align: center;
+        background-color: black;
+        color:#f0f0f0;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        outline: none;
+        
+    }
+
+
     .produto {
         display: inline-grid;
         justify-content: space-around; 
@@ -732,7 +877,7 @@ a img {
     }
 
     .NovosEmStock {
-        width: calc(100.33% - 0px); 
+        width: calc(100% - 0px); 
         text-align: center; 
         background-color: #fff; 
         border-radius:unset; 
@@ -741,151 +886,63 @@ a img {
 
 
     .produto {
-        width: calc(23.33% - 4px); 
-        margin-bottom: 20px; 
+        width: calc(24.33% - 14px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+        margin-bottom: 20px; /* Adicionar margem inferior entre os produtos */
         margin-left: 10px;
         margin-right: 10px;
-        text-align: center; 
-        background-color: #fff; 
-        border-radius: 10px; 
-        padding: 15px; 
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-        transition: all 0.3s ease; 
+        text-align: center; /* Alinhar o conteúdo do produto ao centro */
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 15px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
     }
 
     .produto img {
 
-        width: 150px; 
-        max-width: 100%; 
-        height: auto; 
+        width: 150px; /* Garantir que a imagem do produto ocupe toda a largura do produto */
+        max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do produto */
+        height: auto; /* Manter a proporção da imagem */
         border-radius: 8px;
     }
 
     .produto:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-        transform: translateY(-5px); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aumentar a sombra ao passar o mouse sobre o produto */
+        transform: translateY(-5px); /* Deslocar levemente o produto para cima ao passar o mouse sobre ele */
     }
+  
 
-    main {
-        
-        width: 100%;
-        margin: auto;
-        text-align: center;
-        background-color: #161616;
-        border-radius: 0px;
-        
+    .suggestion-list {
+        list-style-type:decimal;
+        padding: 0;
+        margin: 0;
+        margin-top: 26px;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 1;
+        max-height: 120px;
+        overflow-y: auto;
+        width: calc(71% - 11px); /* Adjust for border */
     }
 
    
-    .descricao {
 
-        font-size: 1.1em;
-    }
-
-    .preco {
-
-        padding: 10px;
-        font-size: 1.1em;
-
-    }
-
-    .titulo {
-        padding: 10px;
-        font-size: 1.5rem;
-        font-weight:bold;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
-        margin: auto;
-        background-color: #0a0a0a;
-        color:#FF950E;
-    
-    }
-
-
-
-   
-  
-
-    .ibusca {
-        display: flex;
-        justify-content: center;
-
-    }
-
-    
-
-
-
-
-
-    /* Estilos para os botões */
-  
-
-    .FormBusca button[type="submit"] {
-        padding: 5px 10px; /* Ajuste o padding conforme necessário */
-        background-color: black;
-        color:#FF950E;
-        border: 1px solid black;
-        border-radius: 5px; /* Adicione uma borda arredondada */
-        cursor: pointer;
-        outline: none;
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Adicione uma transição suave */
-    }
-
-
-  
 }
+  
 
 
+/*  Configurações de tela para GRANDES TELAS  */
+@media screen and (min-width: 1200px) {
 
-
-
-
-/* PARA GRANDES TELAS   */
-@media only screen and (min-width: 1200px) {
-
-   
     #burguer {
+
         display: none;
     }
-
-    .menu {
-        display: block;
-    }
-
-    .menu {
-      
-        margin-bottom: 20px;
-        text-align: center;
-        padding: 10px;
-        border-radius: 8px;
-        background-color: #0a0a0a;
-     }
-
-    .menu > ul > li {
-        display: inline-block;
-    }
-
-    .menu ul li a {
-
-        margin-top: -10px;
-        background-color: black;
-        text-decoration: none;
-        color:white;
-        border-radius: 5px;
-        outline: none;
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Adicione uma transição suave */
-       
-    }
-
-   
-    header {
-
-        background-color: #161616;
-        color: #fff;   
-    }
-
 
     .cabeca {
 
@@ -894,83 +951,152 @@ a img {
         padding: 10px;
     }
 
+  
+    header {
+
+        background-color: #0a0a0a;
+        color: #fff;   
+    }
+
     h1.logo {
 
         font-size: 4em;
         text-align: center;
         padding: 20px;
-      
 
     }
 
-    .ibusca input[type="search"] {
-        margin-top: -10px;
-        width: 600px;
-        padding: 5px;
-        border: 1px solid #E37F01;
-        border-radius: 7px 4px 4px 7px;
+    .menu {
+   
+        display: none;
         
     }
-    
-    
-    
-    .ibusca button {
-        padding: 6px 7px;
-        border-radius: 3px 10px 9px 3px;
-       
+
+    .menu {
+
+        display: block;
+        text-align:center;
+        padding: 10px;
     }
 
-    .ibusca {
-        padding: 20px;
-        margin-bottom: 20px;
+  
+    .menu ul li a {
+        display: block;
+        padding: 8px;
+        text-decoration: none;
         text-align: center;
-        margin: auto;
-        background-color: #0a0a0a;
+        background-color:#161616;
+        color:#fc9c1f;
+        margin-right: 5px;
+        border-bottom: unset;
+        border-top:unset;
+        border-radius: 8px;
+    }
+    
+    .menu ul li a:hover {
+        color:#f77331;
+        background-color:black;
+        border-radius: 8px;
+    
+    }
+
+
+    menu ul li a:active {
+        color: yellow;
+    }
+    
+  
+    
+    menu ul li a:focus {
+        background-color: #cc4400;
+        border-radius: 8px;
         
-    }
-
-    .ibusca button:hover {
-        color: #FF950E;
+    
     }
 
 
+    .menu > ul > li {
+
+        display: inline-block;
+
+    }
+
+    
+
+    .conteiner {
+        width: 100%;
+      
+    }
 
 
     .ibusca {
         display: flex;
         justify-content: center;
-     
+  
     }
 
     
     .titulo {
       
-        padding: 10px;
+        padding: 5px;
         font-size: 1.5rem;
         font-weight: bold;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
         margin: auto;
-        background-color:#0a0a0a;
-        color:#FF950E;
+        background-color: #0a0a0a;
+        color:#fd712c;
     
     }
+
+   
+    
+    .FormBusca input[type="search"] {
+        margin-top: -10px;
+        padding: 5px 8px;
+        width: 81vw;
+        border: 1px solid black;
+        border-radius: 8px 0 0 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        outline: none;
+    }
+
+
+    .FormBusca button[type = "submit"] {
+        margin-top: -10px;
+        padding: 5px 8px;
+        text-align: center;
+        background-color: black;
+        color:#f0f0f0;
+        border: none;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        outline: none;
+        
+    }
+
 
 
     main {
         width: 100%;
         margin: auto;
         text-align: center;
-        background-color: #161616;
+        background-color: #0a0a0a;
         border-radius: 0px;
      
     }
 
 
+   .h4 {
+        font-size: 1.2em;
+   }
    
     .descricao {
 
+        color:#c74200;
         font-size: 1.1em;
        
     }
@@ -983,12 +1109,11 @@ a img {
     }
 
 
-     
     .NovosEmStock {
-        width: calc(100.33% - 0px);
-        text-align: center; 
-        background-color: #fff; 
-        border-radius: 0px; 
+        width: calc(100% - 0px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+        text-align: center; /* Alinhar o conteúdo do produto ao centro */
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 0px; /* Arredondar as bordas do produto */
        
     }
 
@@ -1001,44 +1126,45 @@ a img {
     }
 
     .produto {
-        width: calc(23.33% - -2px);
-        margin-bottom: 20px; 
+        width: calc(24.33% - 20px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+        margin-bottom: 20px; /* Adicionar margem inferior entre os produtos */
         margin-left: 10px;
         margin-right: 10px;
-        text-align: center; 
-        background-color: #fff; 
-        border-radius: 10px; 
-        padding: 15px; 
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-        transition: all 0.3s ease; 
+        text-align: center; /* Alinhar o conteúdo do produto ao centro */
+        background-color: #fff; /* Cor de fundo do produto */
+        border-radius: 10px; /* Arredondar as bordas do produto */
+        padding: 15px; /* Adicionar espaçamento interno ao produto */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+        transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
     }
 
     .produto img {
-        width: 150px; 
-        max-width: 100%; 
-        height: auto; 
+        width: 150px; /* Garantir que a imagem do produto ocupe toda a largura do produto */
+        max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do produto */
+        height: auto; /* Manter a proporção da imagem */
         border-radius: 8px;
     }
 
     .produto:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-        transform: translateY(-5px); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aumentar a sombra ao passar o mouse sobre o produto */
+        transform: translateY(-5px); /* Deslocar levemente o produto para cima ao passar o mouse sobre ele */
     }
 
-
-
-    
-    /* Estilos para os botões */
-    .ibusca button,
-    .FormBusca button[type="submit"] {
-        padding: 5px 10px; /* Ajuste o padding conforme necessário */
-        background-color: black;
-        color:#FF950E;
-        border: 1px solid black;
-        border-radius: 5px; /* Adicione uma borda arredondada */
-        cursor: pointer;
-        outline: none;
-        transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Adicione uma transição suave */
+    .suggestion-list {
+        list-style-type:decimal;
+        padding: 0;
+        margin: 0;
+        margin-top: 26px;
+        position: absolute;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 1;
+        max-height: 120px;
+        overflow-y: auto;
+        width: calc(71% - 15px); /* Adjust for border */
     }
-
 }
