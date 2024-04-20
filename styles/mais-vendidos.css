@@ -30,7 +30,6 @@ body, html {
 
 
 h1.logo {
-
     text-align: center;
     font-size: 3em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -39,14 +38,12 @@ h1.logo {
 }
 
 
-
 #burguer {
 
     display: block;
     color: white;
     text-align: center;
     margin-top: -10px;
-    margin-bottom: 10px;
     margin-left: 85px;
     margin-right: 85px;
     padding: 10px;
@@ -56,8 +53,6 @@ h1.logo {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-
-
 
 #burguer:hover {
     background-color:#999999;
@@ -78,6 +73,7 @@ h1.logo {
 }
 
 
+
 .menu ul li a {
     display: block;
     padding: 10px;
@@ -85,12 +81,10 @@ h1.logo {
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
-   
     text-decoration: none;
     text-align: center;
     background-color:black;
     color:white;
-
     border-bottom: 1px solid #ff5500;
     border-top: 1px solid #ff5500;
     border-top-left-radius: 25px;
@@ -115,7 +109,7 @@ h1.logo {
 
 menu ul li a:focus-within {
     color:black;
-    background-color: #ff5500;
+    background-color:#ff5500;
     border-radius: 20px;
     
 
@@ -123,11 +117,9 @@ menu ul li a:focus-within {
 
 
 
-
 .conteiner {
    width: 100%;
    margin: auto;
-   margin-top: -1px;
     
 }
 
@@ -135,8 +127,8 @@ menu ul li a:focus-within {
 .ibusca {
     display: inline-flex;
     justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 
@@ -175,14 +167,13 @@ main {
     padding: 5px 5px;
     text-align: center;
     background-color:black;
-    color:#fc9c1f;
+    color:#f0f0f0;
     border: none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     outline: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
     
 }
 
@@ -270,11 +261,12 @@ main {
 
 .preco {
     padding: 5px;
-    font-weight:bold;
+    font-weight:bold; 
     color: #1e8122;
 }
 
 .descricao {
+    font-weight: 450;
     color:#c74200;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -324,22 +316,6 @@ option {
 }
 
 
-/* Estilos para os botões */
-
-.ibusca button:hover,
-.FormBusca button[type="submit"]:hover,
-.prev:hover,
-.next:hover {
-    background-color: #FF950E; /* Altera a cor de fundo ao passar o mouse */
-    color: black; /* Altera a cor do texto ao passar o mouse */
-}
-
-.ibusca button:focus,
-.menu ul li a:focus,
-.FormBusca button[type="submit"]:focus {
-    border-color: #FF950E; /* Altera a cor da borda ao receber foco */
-    box-shadow: 0 0 0 2px rgba(229, 129, 0, 0.5); /* Adiciona uma borda ao receber foco */
-}
 
 .paginacao {
     margin-top: 20px;
@@ -373,6 +349,7 @@ option {
     color:#fc9c1f;
   
 }
+
 
 
 
@@ -506,7 +483,7 @@ a img {
 
         font-size: 4em;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
         
     }
 
@@ -521,14 +498,12 @@ a img {
         display: block;
         text-align: center;
         padding: 10px;
-
     }
 
 
     .menu ul li {
         display: inline-block;
     }
-
 
     .menu ul li a {
         display: block;
@@ -537,6 +512,8 @@ a img {
         text-align: center;
         background-color:#161616;
         color:#fc9c1f;
+        margin-top: -10px;
+        margin-left: 5px;
         margin-right: 5px;
         border-bottom: unset;
         border-top:unset;
@@ -648,7 +625,7 @@ a img {
     .ibusca {
         display: flex;
         justify-content: center;
-    
+        margin-top: 10px;
     }
 
 
@@ -746,6 +723,8 @@ a img {
         text-align: center;
         background-color:#161616;
         color:#fc9c1f;
+        margin-top: -10px;
+        margin-left: 5px;
         margin-right: 5px;
         border-bottom: unset;
         border-top:unset;
@@ -801,7 +780,7 @@ a img {
 
         font-size: 4em;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
        
     }
 
@@ -859,6 +838,7 @@ a img {
     .ibusca {
         display: flex;
         justify-content: center;
+        margin-top: 10px;
     }
 
     
@@ -981,7 +961,7 @@ a img {
 
         font-size: 4em;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
 
     }
 
@@ -999,6 +979,7 @@ a img {
     }
 
   
+      
     .menu ul li a {
         display: block;
         padding: 8px;
@@ -1006,12 +987,14 @@ a img {
         text-align: center;
         background-color:#161616;
         color:#fc9c1f;
+        margin-top: -10px;
+        margin-left: 5px;
         margin-right: 5px;
         border-bottom: unset;
         border-top:unset;
         border-radius: 8px;
     }
-    
+
     .menu ul li a:hover {
         color:#f77331;
         background-color:black;
@@ -1046,19 +1029,19 @@ a img {
         width: 100%;
       
     }
-
+    
 
     .ibusca {
         display: flex;
         justify-content: center;
-  
+        margin-top: 10px;
     }
 
     
     .titulo {
       
         padding: 5px;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: bold;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
@@ -1128,7 +1111,7 @@ a img {
     }
 
 
-    .produtos-disponiveis {
+    .mais-vendidos {
         width: calc(100% - 0px); /* Definir a largura de cada produto (ajustável conforme necessário) */
         text-align: center; /* Alinhar o conteúdo do produto ao centro */
         background-color: #fff; /* Cor de fundo do produto */
@@ -1145,10 +1128,9 @@ a img {
     }
 
     .produto {
-        width: calc(24.33% - 20px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+        width: calc(24.33% - 13px); /* Definir a largura de cada produto (ajustável conforme necessário) */
         margin-bottom: 20px; /* Adicionar margem inferior entre os produtos */
-        margin-left: 10px;
-        margin-right: 10px;
+        
         text-align: center; /* Alinhar o conteúdo do produto ao centro */
         background-color: #fff; /* Cor de fundo do produto */
         border-radius: 10px; /* Arredondar as bordas do produto */
@@ -1156,7 +1138,6 @@ a img {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
         transition: all 0.3s ease; /* Adicionar uma transição suave ao passar o mouse sobre o produto */
     }
-
     .produto img {
         width: 150px; /* Garantir que a imagem do produto ocupe toda a largura do produto */
         max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do produto */
@@ -1190,35 +1171,6 @@ a img {
 
 
 
-
-
-/* Estilos para os botões */
-
-.FormBusca button[type="submit"] {
-    padding: 5px 10px; /* Ajuste o padding conforme necessário */
-    background-color: black;
-    color: #FF950E;
-    border: 1px solid black;
-    border-radius: 5px; /* Adicione uma borda arredondada */
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Adicione uma transição suave */
-}
-
-.ibusca button:hover,
-.FormBusca button[type="submit"]:hover,
-.prev:hover,
-.next:hover {
-    background-color: #FF950E; /* Altera a cor de fundo ao passar o mouse */
-    color: black; /* Altera a cor do texto ao passar o mouse */
-}
-
-.ibusca button:focus,
-.menu ul li a:focus,
-.FormBusca button[type="submit"]:focus {
-    border-color: #FF950E; /* Altera a cor da borda ao receber foco */
-    box-shadow: 0 0 0 2px rgba(229, 129, 0, 0.5); /* Adiciona uma borda ao receber foco */
-}
 
 
 

@@ -3,49 +3,49 @@ const inventario = [
   {
     nome: "Antonio Bandeiras",
     descricao: "eau de parfum",
-    preco: "25.000,00 kz",
+    topico: "perfumes",
     imagem: "imgs/ab-foto-g.jpg",
   },
   {
     nome: "Dolores P. Femme",
     descricao: "eau de parfum",
-    preco: "20.000,00 kz",
+    topico: "perfumes",
     imagem: "imgs/dlr-foto-g.jpg",
   },
   {
     nome: "Zara Man",
     descricao: "eau de parfum",
-    preco: "10.000,00 kz",
+    topico: "perfumes",
     imagem: "imgs/zr-foto-g.jpg",
   },
   {
     nome: "Gentle Magic",
-    descricao: "skincare",
-    preco: "25.000,00 kz",
+    descricao: "serum",
+    topico: "skincare",
     imagem: "imgs/gm2-foto-g.jpg",
   },
   {
     nome: "Yves Rocher",
-    descricao: "skincare",
-    preco: "10.000,00 kz",
+    descricao: "Creme",
+    topico: "skincare",
     imagem: "imgs/yr-foto-g.jpg",
   },
   {
     nome: "Bebeauty",
-    descricao: "skincare",
-    preco: "20.000,00 kz",
+    descricao: "skin gel",
+    topico: "skincare",
     imagem: "imgs/bb-foto-g.jpg",
   },
   {
     nome: "Zara Man",
     descricao: "eau de parfum",
-    preco: "10.000,00 kz",
+    topico: "perfumes",
     imagem: "imgs/zr2-foto-g.jpg",
   },
   {
     nome: "Yves Rocher 2",
-    descricao: "skincare",
-    preco: "25.000,00 kz",
+    descricao: "Creme",
+    topico: "skincare",
     imagem: "imgs/yr2-foto-g.jpg",
   }
 ];
@@ -55,7 +55,7 @@ function adicionarProdutos(categoria) {
   const produtosSection = document.querySelector(".produtos");
 
   inventario.forEach((produto) => {
-      if (produto.descricao === categoria) {
+      if (produto.topico === categoria) {
           // Criar uma nova seção para o produto
           const produtoSection = document.createElement("section");
           produtoSection.classList.add("produto");
@@ -70,7 +70,7 @@ function adicionarProdutos(categoria) {
               </picture>
               <h4 class="nome">${produto.nome}</h4>
               <p class="descricao">${produto.descricao}</p>
-              <p class="preco">${produto.preco}</p>
+              <p class="preco">${produto.topico}</p>
           `;
 
           // Adicionar o produto à seção de produtos
@@ -86,9 +86,9 @@ function ordenarPorPreco(categoria, ordem) {
   // Ordenar o inventário de acordo com a ordem especificada
   inventario.sort((a, b) => {
       if (ordem === 'asc') {
-          return parseFloat(a.preco.replace(/[^\d.-]/g, '')) - parseFloat(b.preco.replace(/[^\d.-]/g, ''));
+          return parseFloat(a.topico.replace(/[^\d.-]/g, '')) - parseFloat(b.topico.replace(/[^\d.-]/g, ''));
       } else {
-          return parseFloat(b.preco.replace(/[^\d.-]/g, '')) - parseFloat(a.preco.replace(/[^\d.-]/g, ''));
+          return parseFloat(b.preco.replace(/[^\d.-]/g, '')) - parseFloat(a.topico.replace(/[^\d.-]/g, ''));
       }
   });
 
@@ -97,7 +97,7 @@ function ordenarPorPreco(categoria, ordem) {
 
   // Adicionar produtos ordenados à seção de produtos
   inventario.forEach((produto) => {
-      if (produto.descricao === categoria) {
+      if (produto.topico === categoria) {
           // Criar uma nova seção para o produto
           const produtoSection = document.createElement("section");
           produtoSection.classList.add("produto");
@@ -112,7 +112,7 @@ function ordenarPorPreco(categoria, ordem) {
               </picture>
               <h4 class="nome">${produto.nome}</h4>
               <p class="descricao">${produto.descricao}</p>
-              <p class="preco">${produto.preco}</p>
+              <p class="preco">${produto.topico}</p>
           `;
 
           // Adicionar o produto à seção de produtos
@@ -148,7 +148,7 @@ function exibirProdutosPorPagina(categoria, paginaAtual, itensPorPagina) {
           </picture>
           <h4 class="nome">${produto.nome}</h4>
           <p class="descricao">${produto.descricao}</p>
-          <p class="preco">${produto.preco}</p>
+          <p class="preco">${produto.topico}</p>
       `;
 
       // Adicionar o produto à seção de produtos
@@ -179,7 +179,7 @@ formBusca.addEventListener('submit', function (event) {
                 </picture>
                 <h4 class="nome">${produto.nome}</h4>
                 <p class="descricao">${produto.descricao}</p>
-                <p class="preco">${produto.preco}</p>
+                <p class="preco">${produto.topico}</p>
             </section>
         `).join('') :
         '<p>Nenhum resultado encontrado.</p>';

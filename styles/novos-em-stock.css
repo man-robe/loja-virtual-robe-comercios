@@ -30,7 +30,6 @@ body, html {
 
 
 h1.logo {
-
     text-align: center;
     font-size: 3em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -39,14 +38,12 @@ h1.logo {
 }
 
 
-
 #burguer {
 
     display: block;
     color: white;
     text-align: center;
     margin-top: -10px;
-    margin-bottom: 10px;
     margin-left: 85px;
     margin-right: 85px;
     padding: 10px;
@@ -56,7 +53,6 @@ h1.logo {
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
-
 
 #burguer:hover {
     background-color:#999999;
@@ -77,6 +73,7 @@ h1.logo {
 }
 
 
+
 .menu ul li a {
     display: block;
     padding: 10px;
@@ -84,12 +81,10 @@ h1.logo {
     margin-bottom: 10px;
     margin-left: 10px;
     margin-right: 10px;
-   
     text-decoration: none;
     text-align: center;
     background-color:black;
     color:white;
-
     border-bottom: 1px solid #ff5500;
     border-top: 1px solid #ff5500;
     border-top-left-radius: 25px;
@@ -122,10 +117,10 @@ menu ul li a:focus-within {
 
 
 
+
 .conteiner {
    width: 100%;
    margin: auto;
-   margin-top: -1px;
     
 }
 
@@ -133,8 +128,8 @@ menu ul li a:focus-within {
 .ibusca {
     display: inline-flex;
     justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 
@@ -267,11 +262,12 @@ main {
 
 .preco {
     padding: 5px;
-    font-weight:bold;
+    font-weight:500;
     color: #1e8122;
 }
 
 .descricao {
+    font-weight: 450;
     color:#c74200;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -354,6 +350,7 @@ option {
     color:#fc9c1f;
   
 }
+
 
 
 
@@ -487,7 +484,7 @@ a img {
 
         font-size: 4em;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
         
     }
 
@@ -502,14 +499,12 @@ a img {
         display: block;
         text-align: center;
         padding: 10px;
-
     }
 
 
     .menu ul li {
         display: inline-block;
     }
-
 
     .menu ul li a {
         display: block;
@@ -518,6 +513,8 @@ a img {
         text-align: center;
         background-color:#161616;
         color:#fc9c1f;
+        margin-top: -10px;
+        margin-left: 5px;
         margin-right: 5px;
         border-bottom: unset;
         border-top:unset;
@@ -525,7 +522,7 @@ a img {
     }
     
     .menu ul li a:hover {
-        color: #f25304;
+        color:#f77331;
         background-color:black;
         border-radius: 8px;
     
@@ -629,7 +626,7 @@ a img {
     .ibusca {
         display: flex;
         justify-content: center;
-    
+        margin-top: 10px;
     }
 
 
@@ -727,6 +724,8 @@ a img {
         text-align: center;
         background-color:#161616;
         color:#fc9c1f;
+        margin-top: -10px;
+        margin-left: 5px;
         margin-right: 5px;
         border-bottom: unset;
         border-top:unset;
@@ -782,7 +781,7 @@ a img {
 
         font-size: 4em;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
        
     }
 
@@ -840,6 +839,7 @@ a img {
     .ibusca {
         display: flex;
         justify-content: center;
+        margin-top: 10px;
     }
 
     
@@ -962,7 +962,7 @@ a img {
 
         font-size: 4em;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
 
     }
 
@@ -980,6 +980,7 @@ a img {
     }
 
   
+      
     .menu ul li a {
         display: block;
         padding: 8px;
@@ -987,12 +988,14 @@ a img {
         text-align: center;
         background-color:#161616;
         color:#fc9c1f;
+        margin-top: -10px;
+        margin-left: 5px;
         margin-right: 5px;
         border-bottom: unset;
         border-top:unset;
         border-radius: 8px;
     }
-    
+
     .menu ul li a:hover {
         color:#f77331;
         background-color:black;
@@ -1027,19 +1030,19 @@ a img {
         width: 100%;
       
     }
-
+    
 
     .ibusca {
         display: flex;
         justify-content: center;
-  
+        margin-top: 10px;
     }
 
     
     .titulo {
       
         padding: 5px;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: bold;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
@@ -1126,10 +1129,9 @@ a img {
     }
 
     .produto {
-        width: calc(24.33% - 20px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+        width: calc(24.33% - 13px); /* Definir a largura de cada produto (ajustável conforme necessário) */
         margin-bottom: 20px; /* Adicionar margem inferior entre os produtos */
-        margin-left: 10px;
-        margin-right: 10px;
+        
         text-align: center; /* Alinhar o conteúdo do produto ao centro */
         background-color: #fff; /* Cor de fundo do produto */
         border-radius: 10px; /* Arredondar as bordas do produto */

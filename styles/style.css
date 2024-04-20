@@ -261,13 +261,15 @@ main {
 
 
 
+
 .preco {
     padding: 5px;
-    font-weight:bold;
+    font-weight:500;
     color: #1e8122;
 }
 
 .descricao {
+    font-weight: 450;
     color:#c74200;
     margin-top: 5px;
     margin-bottom: 5px;

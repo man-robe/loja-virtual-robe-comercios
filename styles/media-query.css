@@ -75,6 +75,8 @@
         text-align: center;
         background-color:#161616;
         color:#fc9c1f;
+        margin-top: 5px;
+        margin-bottom: 5px;
         margin-right: 5px;
         border-bottom: unset;
         border-top:unset;
@@ -186,7 +188,7 @@
     .ibusca {
         display: flex;
         justify-content: center;
-    
+        margin-top: 5px;
     }
 
 
@@ -287,7 +289,6 @@
     }
 
 
-    
     .menu ul li a {
         display: block;
         padding: 8px;
@@ -295,6 +296,8 @@
         text-align: center;
         background-color:#161616;
         color:#fc9c1f;
+        margin-top: 5px;
+        margin-bottom: 5px;
         margin-right: 5px;
         border-bottom: unset;
         border-top:unset;
@@ -408,6 +411,7 @@
     .ibusca {
         display: flex;
         justify-content: center;
+        margin-top: 5px;
     }
 
     
@@ -555,11 +559,14 @@
         text-align: center;
         background-color:#161616;
         color:#fc9c1f;
+        margin-top: 5px;
+        margin-bottom: 5px;
         margin-right: 5px;
         border-bottom: unset;
         border-top:unset;
         border-radius: 8px;
     }
+    
     
     .menu ul li a:hover {
         color:#f77331;
@@ -600,7 +607,7 @@
     .ibusca {
         display: flex;
         justify-content: center;
-  
+        margin-top: 5px;
     }
 
     
@@ -694,10 +701,9 @@
     }
 
     .produto {
-        width: calc(24.33% - 20px); /* Definir a largura de cada produto (ajustável conforme necessário) */
+        width: calc(24.33% - 13px); /* Definir a largura de cada produto (ajustável conforme necessário) */
         margin-bottom: 20px; /* Adicionar margem inferior entre os produtos */
-        margin-left: 10px;
-        margin-right: 10px;
+        
         text-align: center; /* Alinhar o conteúdo do produto ao centro */
         background-color: #fff; /* Cor de fundo do produto */
         border-radius: 10px; /* Arredondar as bordas do produto */
