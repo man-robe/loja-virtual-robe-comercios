@@ -993,17 +993,7 @@ a img {
         padding: 10px;
     }
 
-    .carousel-item img {
-        width: 200px;
-        margin-top: 20px;
-        text-align: center;
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
     
-    }
-
-  
       
     .menu ul li a {
         display: block;
@@ -1204,8 +1194,8 @@ a img {
 
 .carousel h2 {
     margin-bottom: 20px;
-    font-size: 2em;
-    color:#c74200;
+    font-size: 1.6em;
+    color:#fd712c;
     text-align: center;
 }
 
@@ -1226,25 +1216,26 @@ a img {
     display: flex;
     justify-content: center;
     overflow-x: hidden;
-    border-radius: 8px;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    background-color: black;
+    background-color: #321300;
+
 }
 
 
 
 
 .carousel-item {
-    display: inline-flex;
-    width: 150px;
+    width: 200px;
     max-width: 100%;
     flex: 0 0 auto;
     padding: 10px;
-    box-sizing: border-box;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px;
-    background-color:#040404;
+    border-radius: 10px;
+    background-color:#321300;
 
 }
 
@@ -1262,7 +1253,9 @@ a img {
     text-align: center;
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
+    background-color: #321300;
+
 
 }
 
