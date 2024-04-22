@@ -16,49 +16,49 @@ const inventario = [
     {
       nome: "Antonio Bandeiras",
       descricao: "eau de parfum",
-      preco: "25.000,00 kz",
+      preco: "perfumes",
       imagem: "../imgs/ab-foto-g.jpg",
     },
     {
       nome: "Dolores P. Femme",
       descricao: "eau de parfum",
-      preco: "20.000,00 kz",
+      preco: "perfumes",
       imagem: "../imgs/dlr-foto-g.jpg",
     },
     {
       nome: "Zara Man",
       descricao: "eau de parfum",
-      preco: "10.000,00 kz",
+      preco: "perfumes",
       imagem: "../imgs/zr-foto-g.jpg",
     },
     {
       nome: "Gentle Magic",
       descricao: "skincare",
-      preco: "25.000,00 kz",
+      preco: "skin serum",
       imagem: "../imgs/gm2-foto-g.jpg",
     },
     {
       nome: "Yves Rocher",
       descricao: "skincare",
-      preco: "10.000,00 kz",
+      preco: "Creme",
       imagem: "../imgs/yr-foto-g.jpg",
     },
     {
       nome: "Bebeauty",
       descricao: "skincare",
-      preco: "20.000,00 kz",
+      preco: "skin gel",
       imagem: "../imgs/bb-foto-g.jpg",
     },
     {
       nome: "Zara Man",
       descricao: "eau de parfum",
-      preco: "10.000,00 kz",
+      preco: "perfumes",
       imagem: "../imgs/zr2-foto-g.jpg",
     },
     {
       nome: "Yves Rocher 2",
       descricao: "skincare",
-      preco: "25.000,00 kz",
+      preco: "Creme",
       imagem: "../imgs/yr2-foto-g.jpg",
     }
   ];

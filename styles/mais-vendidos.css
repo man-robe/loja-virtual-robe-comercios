@@ -261,7 +261,7 @@ main {
 
 .preco {
     padding: 5px;
-    font-weight:bold; 
+    font: weight 500px; 
     color: #1e8122;
 }
 
