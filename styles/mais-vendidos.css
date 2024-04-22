@@ -259,7 +259,7 @@ main {
 
 
 
-.preco {
+.categoria {
     padding: 5px;
     font-weight:500; 
     color: #1e8122;
@@ -319,12 +319,14 @@ option {
 
 .paginacao {
     margin-top: 20px;
+    padding: 10px;
     text-align: center;
    
 }
 
 
 .proxima, .anterior {
+    margin-top: 10px;
     margin-left: 2.5px;
     margin-right: 2.5px;
     margin-bottom: 10px;
@@ -339,7 +341,6 @@ option {
 .proxima a, .anterior a {
     text-align: center;
     text-decoration: none;
-    
     color:#ccc;
     padding: 5px;
 }
@@ -359,6 +360,7 @@ footer {
     background-color: #161616;
     color: #fff;
     padding: 30px 0;
+    margin-top: -40px;
 }
 
 footer h4 {
@@ -606,11 +608,12 @@ a img {
 
         color:#c74200;
         font-size: 1rem;
+        text-align: center;
     
     }
 
-    .preco {
-
+    .categoria {
+        text-align: center;
         padding: 5px;
         font-size: 1em;
     }
@@ -802,13 +805,15 @@ a img {
 
         color:#c74200;
         font-size: 1.1em;
+        text-align: center;
         
     }
 
-    .preco {
+    .categoria {
 
         padding: 10px;
         font-size: 1.1em;
+        text-align: center;
 
     }
 
@@ -822,6 +827,16 @@ a img {
         margin: auto;
         background-color: #0a0a0a;
         color:#fd712c;
+    
+    }
+
+    .carousel-item img {
+        width: 300px;
+        margin-top: 20px;
+        text-align: center;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
     
     }
 
@@ -978,6 +993,16 @@ a img {
         padding: 10px;
     }
 
+    .carousel-item img {
+        width: 200px;
+        margin-top: 20px;
+        text-align: center;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    
+    }
+
   
       
     .menu ul li a {
@@ -1094,20 +1119,22 @@ a img {
 
    .h4 {
         font-size: 1.2em;
+        text-align: center;
    }
    
     .descricao {
 
         color:#c74200;
         font-size: 1.1em;
+        text-align: center;
        
     }
 
 
-    .preco {
-
+    .categoria {
         padding: 10px;
         font-size: 1.1em;
+        text-align: center;
     }
 
 
@@ -1177,8 +1204,9 @@ a img {
 
 .carousel h2 {
     margin-bottom: 20px;
-    font-size: 24px;
-    color:#FF950E;
+    font-size: 2em;
+    color:#c74200;
+    text-align: center;
 }
 
 
@@ -1200,12 +1228,15 @@ a img {
     overflow-x: hidden;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: black;
 }
 
 
 
 
 .carousel-item {
+    display: inline-flex;
+    width: 150px;
     max-width: 100%;
     flex: 0 0 auto;
     padding: 10px;
@@ -1226,7 +1257,9 @@ a img {
 
 .carousel-item img {
     width: 300px;
-    margin-top: 20px;
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
     max-width: 100%;
     height: auto;
     border-radius: 8px;
@@ -1237,12 +1270,14 @@ a img {
     margin-top: 10px;
     font-size: 20px;
     color:white;
+    text-align: center;
 }
 
 .carousel-item p {
     margin-top: 10px;
     font-size: 16px;
     color: #FF950E;
+    text-align: center;
 }
 
 
@@ -1250,7 +1285,7 @@ a img {
 
 .prev, .next {
     position: absolute;
-    top: 50%;
+    top: 43%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -1259,13 +1294,18 @@ a img {
     padding: 10px;
     font-size: 20px;
     z-index: 1;
-    border-radius: 50%;
+    border-radius: 15%;
 }
 
 .prev {
-    left: 7px;
+    left: 10px;
 }
 
 .next {
-    right: 7px;
+    right: 10px;
 }
+
+.prev:hover, .next:hover {
+    color: #FF950E;
+}
+

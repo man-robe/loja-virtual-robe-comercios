@@ -1,5 +1,4 @@
-/*-------------------------------------------------------------------------------------------------------------*/
-  // função para mostrar e ocultar o menu hamburger dos telefones
+// função para mostrar e ocultar o menu hamburger dos telefones
   
   function clickMenu() {
     if(itens.style.display == 'block' ) {
@@ -8,7 +7,7 @@
         itens.style.display = 'block'
     }
 }
-/*------------------------------------------------------------------------------------------------------------*/
+
 
 
 // Lista de produtos
@@ -16,292 +15,199 @@ const inventario = [
     {
       nome: "Antonio Bandeiras",
       descricao: "eau de parfum",
-      preco: "perfumes",
+      categoria: "perfumes",
       imagem: "../imgs/ab-foto-g.jpg",
     },
     {
       nome: "Dolores P. Femme",
       descricao: "eau de parfum",
-      preco: "perfumes",
+      categoria: "perfumes",
       imagem: "../imgs/dlr-foto-g.jpg",
     },
     {
       nome: "Zara Man",
       descricao: "eau de parfum",
-      preco: "perfumes",
+      categoria: "perfumes",
       imagem: "../imgs/zr-foto-g.jpg",
     },
     {
       nome: "Gentle Magic",
-      descricao: "skincare",
-      preco: "skin serum",
+      descricao: "skin serum",
+      categoria: "skincare",
       imagem: "../imgs/gm2-foto-g.jpg",
     },
     {
       nome: "Yves Rocher",
-      descricao: "skincare",
-      preco: "Creme",
+      descricao: "Creme",
+      categoria: "skincare",
       imagem: "../imgs/yr-foto-g.jpg",
     },
     {
       nome: "Bebeauty",
-      descricao: "skincare",
-      preco: "skin gel",
+      descricao: "skin gel",
+      categoria: "skincare",
       imagem: "../imgs/bb-foto-g.jpg",
     },
     {
       nome: "Zara Man",
       descricao: "eau de parfum",
-      preco: "perfumes",
+      categoria: "perfumes",
       imagem: "../imgs/zr2-foto-g.jpg",
     },
     {
       nome: "Yves Rocher 2",
-      descricao: "skincare",
-      preco: "Creme",
+      descricao: "Creme",
+      categoria: "skincare",
       imagem: "../imgs/yr2-foto-g.jpg",
     }
   ];
   
-  // Função para adicionar produtos dinamicamente ao HTML
-  function adicionarProdutos(categoria) {
-    const produtosSection = document.querySelector(".mais-vendidos");
-  
-    inventario.forEach((produto) => {
-        if (produto.descricao === categoria) {
-            // Criar uma nova seção para o produto
-            const produtoSection = document.createElement("section");
-            produtoSection.classList.add("produto");
-  
-            // Adicionar um ID único para cada seção de produto
-            produtoSection.id = `produto-${inventario.indexOf(produto) + 1}`;
-  
-            // Criar a estrutura HTML para o produto
-            produtoSection.innerHTML = `
-                <picture>
-                    <img src="${produto.imagem}" alt="${produto.nome}">
-                </picture>
-                <h4 class="nome">${produto.nome}</h4>
-                <p class="descricao">${produto.descricao}</p>
-                <p class="preco">${produto.preco}</p>
-            `;
-  
-            // Adicionar o produto à seção de produtos
-            produtosSection.appendChild(produtoSection);
-        }
-    });
-  }
-  
-  // Função para ordenar produtos por preço
-  function ordenarPorPreco(categoria, ordem) {
-    const produtosSection = document.querySelector(".mais-vendidos");
-  
-    // Ordenar o inventário de acordo com a ordem especificada
-    inventario.sort((a, b) => {
-        if (ordem === 'asc') {
-            return parseFloat(a.preco.replace(/[^\d.-]/g, '')) - parseFloat(b.preco.replace(/[^\d.-]/g, ''));
-        } else {
-            return parseFloat(b.preco.replace(/[^\d.-]/g, '')) - parseFloat(a.preco.replace(/[^\d.-]/g, ''));
-        }
-    });
-  
-    // Limpar a seção de produtos
-    produtosSection.innerHTML = '';
-  
-    // Adicionar produtos ordenados à seção de produtos
-    inventario.forEach((produto) => {
-        if (produto.descricao === categoria) {
-            // Criar uma nova seção para o produto
-            const produtoSection = document.createElement("section");
-            produtoSection.classList.add("produto");
-  
-            // Adicionar um ID único para cada seção de produto
-            produtoSection.id = `produto-${inventario.indexOf(produto) + 1}`;
-  
-            // Criar a estrutura HTML para o produto
-            produtoSection.innerHTML = `
-                <picture>
-                    <img src="${produto.imagem}" alt="${produto.nome}">
-                </picture>
-                <h4 class="nome">${produto.nome}</h4>
-                <p class="descricao">${produto.descricao}</p>
-                <p class="preco">${produto.preco}</p>
-            `;
-  
-            // Adicionar o produto à seção de produtos
-            produtosSection.appendChild(produtoSection);
-        }
-    });
-  }
-  
-  // Função para exibir produtos em uma página específica
-  function exibirProdutosPorPagina(categoria, paginaAtual, itensPorPagina) {
-    const produtosSection = document.querySelector(".mais-vendidos");
-  
-    // Limpar a seção de produtos
-    produtosSection.innerHTML = '';
-  
-    const startIndex = (paginaAtual - 1) * itensPorPagina;
-    const endIndex = startIndex + itensPorPagina;
-    const produtosPorPagina = inventario.filter(produto => produto.descricao === categoria).slice(startIndex, endIndex);
-  
-    // Adicionar produtos à seção de produtos
-    produtosPorPagina.forEach((produto) => {
-        // Criar uma nova seção para o produto
-        const produtoSection = document.createElement("section");
-        produtoSection.classList.add("produto");
-  
-        // Adicionar um ID único para cada seção de produto
-        produtoSection.id = `produto-${inventario.indexOf(produto) + 1}`;
-  
-        // Criar a estrutura HTML para o produto
-        produtoSection.innerHTML = `
-            <picture>
-                <img src="${produto.imagem}" alt="${produto.nome}">
-            </picture>
-            <h4 class="nome">${produto.nome}</h4>
-            <p class="descricao">${produto.descricao}</p>
-            <p class="preco">${produto.preco}</p>
-        `;
-  
-        // Adicionar o produto à seção de produtos
-        produtosSection.appendChild(produtoSection);
-    });
-  }
-  
-  // Função de busca
-  const formBusca = document.getElementById('iFormBusca');
-  formBusca.addEventListener('submit', function (event) {
-      event.preventDefault(); // Evita o envio do formulário padrão
-      const termoBusca = document.getElementById('buscar').value.trim().toLowerCase(); // Obtém o termo de busca e limpa espaços em branco e converte para minúsculas
-  
-      // Filtrar produtos que correspondem ao termo de busca
-      const produtosFiltrados = inventario.filter(produto => {
-          const nomeProduto = produto.nome.toLowerCase(); // Convertendo o nome do produto para minúsculas
-          const descricaoProduto = produto.descricao.toLowerCase(); // Convertendo a descrição do produto para minúsculas
-          return nomeProduto.includes(termoBusca) || descricaoProduto.includes(termoBusca);
-      });
-  
-      // Exibir resultados da busca
-      const produtosSection = document.querySelector('.mais-vendidos');
-      produtosSection.innerHTML = produtosFiltrados.length > 0 ? 
-          produtosFiltrados.map(produto => `
-              <section class="produto" id="produto-${inventario.indexOf(produto) + 1}">
-                  <picture>
-                      <img src="${produto.imagem}" alt="${produto.nome}">
-                  </picture>
-                  <h4 class="nome">${produto.nome}</h4>
-                  <p class="descricao">${produto.descricao}</p>
-                  <p class="preco">${produto.preco}</p>
-              </section>
-          `).join('') :
-          '<p>Nenhum resultado encontrado.</p>';
+
+// Função para adicionar produtos dinamicamente ao HTML
+// Modificando a função adicionarProdutos para aceitar um argumento de categoria
+function adicionarProdutos(categoria) {
+  const produtosSection = document.querySelector(".mais-vendidos");
+
+  produtosSection.innerHTML = ''; // Limpar a seção de produtos antes de adicionar os novos produtos
+
+  inventario.forEach((produto) => {
+      if (categoria === "todos" || produto.categoria === categoria) {
+          const produtoSection = document.createElement("section");
+          produtoSection.classList.add("produto");
+
+          produtoSection.innerHTML = `
+              <picture>
+                  <img src="${produto.imagem}" alt="${produto.nome}">
+              </picture>
+              <h4 class="nome">${produto.nome}</h4>
+              <p class="descricao">${produto.descricao}</p>
+              <p class="categoria">${produto.categoria}</p>
+          `;
+
+          produtosSection.appendChild(produtoSection);
+      }
   });
-  
-  // Chamar a função para adicionar os produtos ao carregar a página
-  window.addEventListener("load", () => {
-    adicionarProdutos("eau de parfum");
-    adicionarProdutos("skincare");
-  });
-  
+}
 
-  
-
-  
-  
-
-  
-
-
-
-
-//função para adicionar produtos ao carousel container
-document.addEventListener('DOMContentLoaded', function() {
-    const carouselContainer = document.querySelector('.carousel-container');
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
-    let currentIndex = 0;
-
-    const items = [
-        { image: '../imgs/ab-foto-p.jpg', title: 'António Bandeiras', description: 'eau de parfum' },
-        { image: '../imgs/bb-foto-p.jpg', title: 'Bebeauty', description: 'Skin Gel' },
-        { image: '../imgs/gm2-foto-p.jpg', title: 'Gentle magic', description: 'skincare serum' },
-        // Adicione mais itens conforme necessário
-    ];
-
-    function addItemsToCarousel() {
-        items.forEach(item => {
-            const newItem = document.createElement('div');
-            newItem.classList.add('carousel-item');
-            newItem.innerHTML = `
-                <img src="${item.image}" alt="${item.title}">
-                <h3>${item.title}</h3>
-                <p>${item.description}</p>
-            `;
-            carouselContainer.appendChild(newItem);
-        });
-
-        // Ajustando a largura máxima do carouselContainer
-        carouselContainer.style.maxWidth = '100%';
-
-        // Centralizando o carouselContainer e os itens
-        function centerCarousel() {
-            const windowWidth = window.innerWidth;
-            const itemWidth = Math.min(windowWidth, 500); // Definindo a largura máxima de 500px para o item
-            carouselContainer.style.width = `${itemWidth}px`;
-            carouselContainer.style.margin = '0 auto';
-
-            const carouselItems = document.querySelectorAll('.carousel-item');
-            carouselItems.forEach(item => {
-                item.style.width = `${itemWidth}px`;
-                item.style.display = 'none';
-            });
-            carouselItems[currentIndex].style.display = 'block';
-        }
-
-        centerCarousel(); // Chamando a função para centralizar o carouselContainer e os itens inicialmente
-
-        window.addEventListener('resize', centerCarousel); // Centralizando o carouselContainer e os itens ao redimensionar a janela
-    }
-
-    function showItem(index) {
-        const carouselItems = document.querySelectorAll('.carousel-item');
-        carouselItems.forEach((item, i) => {
-            if (i === index) {
-                item.style.display = 'block';
-                item.classList.add('focused');
-            } else {
-                item.style.display = 'none';
-                item.classList.remove('focused');
-            }
-        });
-    }
-
-    function nextSlide() {
-        currentIndex++;
-        if (currentIndex >= items.length) {
-            currentIndex = 0;
-        }
-        setTimeout(() => {
-            showItem(currentIndex);
-        }, 50);
-    }
-
-    function prevSlide() {
-        currentIndex--;
-        if (currentIndex < 0) {
-            currentIndex = items.length - 1;
-        }
-        setTimeout(() => {
-            showItem(currentIndex);
-        }, 50);
-    }
-
-    addItemsToCarousel();
-
-    prevButton.addEventListener('click', prevSlide);
-    nextButton.addEventListener('click', nextSlide);
+// Adicione um evento de mudança ao seletor filtro-categoria
+const filtroCategoria = document.getElementById('filtro-categoria');
+filtroCategoria.addEventListener('change', function() {
+    // Obtém o valor selecionado do seletor
+    const categoriaSelecionada = filtroCategoria.value;
+    // Chama a função para filtrar os produtos por categoria
+    adicionarProdutos(categoriaSelecionada);
 });
+
+// Chamar a função para adicionar os produtos ao carregar a página
+window.addEventListener("load", () => {
+  adicionarProdutos("todos");
+});
+
+
+
+
+
+
+
+
+// Função de busca
+const formBusca = document.getElementById('iFormBusca');
+formBusca.addEventListener('submit', function (event) {
+    event.preventDefault(); // Evita o envio do formulário padrão
+    const termoBusca = document.getElementById('buscar').value.trim().toLowerCase(); // Obtém o termo de busca e limpa espaços em branco e converte para minúsculas
+
+    // Filtrar produtos que correspondem ao termo de busca
+    const produtosFiltrados = inventario.filter(produto => {
+        const nomeProduto = produto.nome.toLowerCase(); // Convertendo o nome do produto para minúsculas
+        const descricaoProduto = produto.descricao.toLowerCase(); // Convertendo a descrição do produto para minúsculas
+        return nomeProduto.includes(termoBusca) || descricaoProduto.includes(termoBusca);
+    });
+
+    // Exibir resultados da busca
+    const produtosSection = document.querySelector('.mais-vendidos');
+    produtosSection.innerHTML = produtosFiltrados.length > 0 ? 
+        produtosFiltrados.map(produto => `
+            <section class="produto" id="produto-${inventario.indexOf(produto) + 1}">
+                <picture>
+                    <img src="${produto.imagem}" alt="${produto.nome}">
+                </picture>
+                <h4 class="nome">${produto.nome}</h4>
+                <p class="descricao">${produto.descricao}</p>
+                <p class="categoria">${produto.categoria}</p>
+            </section>
+        `).join('') :
+        '<p>Nenhum resultado encontrado.</p>';
+});
+  
+ 
+  
+
+
+
+
+
+
+
+//Funções para o carousel
+document.addEventListener('DOMContentLoaded', function() {
+  const items = [
+      { image: '../imgs/ab-foto-p.jpg', title: 'António Bandeiras', description: 'eau de parfum' },
+      { image: '../imgs/bb-foto-p.jpg', title: 'Bebeauty', description: 'Skin Gel' },
+      { image: '../imgs/gm2-foto-p.jpg', title: 'Gentle magic', description: 'skincare serum' },
+      { image: '../imgs/zr2-foto-p.jpg', title: 'Zara Man', description: 'eau de parfum' },
+      { image: '../imgs/yr2-foto-p.jpg', title: 'Yves Rocher ', description: 'Creme' },
+      { image: '../imgs/dlr2-foto-p.jpg', title: 'Dolores P. Femme', description: 'eau de parfum' }
+      // Adicione mais itens conforme necessário
+  ];
+
+  const carouselContainer = document.querySelector('.carousel-container');
+
+  items.forEach(item => {
+      const newItem = document.createElement('div');
+      newItem.classList.add('carousel-item');
+      newItem.innerHTML = `
+          <img src="${item.image}" alt="${item.title}">
+          <div class="carousel-item-content">
+              <h3>${item.title}</h3>
+              <p>${item.description}</p>
+          </div>
+      `;
+      carouselContainer.appendChild(newItem);
+  });
+
+
+  $(document).ready(function() {
+    $('.carousel-container').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: true,
+        dots: false,
+        prevArrow: '<button class="prev">&#10094;</button>',
+        nextArrow: '<button class="next">&#10095;</button>',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+  });
+
+});
+
+
+  
+
 
 
 

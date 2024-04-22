@@ -260,7 +260,7 @@ main {
 
 
 
-.preco {
+.categoria {
     padding: 5px;
     font-weight:500;
     color: #1e8122;
@@ -610,7 +610,7 @@ a img {
     
     }
 
-    .preco {
+    .categoria {
 
         padding: 5px;
         font-size: 1em;
@@ -806,7 +806,7 @@ a img {
         
     }
 
-    .preco {
+    .categoria {
 
         padding: 10px;
         font-size: 1.1em;
@@ -1105,7 +1105,7 @@ a img {
     }
 
 
-    .preco {
+    .categoria {
 
         padding: 10px;
         font-size: 1.1em;

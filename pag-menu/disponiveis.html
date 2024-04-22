@@ -50,8 +50,8 @@
             <div class="categorias">
                 
                 <label for="filtro-categoria">Filtrar por Categoria :</label>
-                <select id="filtro-categoria">
-                    <option value="todos">Todos </option>
+                <select id="filtro-categoria" onchange="filtrarPorCategoria(this.value)">
+                    <option value="todos"> Todos </option>
                     <option value="perfumes">perfumes</option>
                     <option value="skincare">skincare</option>
                 </select>

@@ -1,199 +1,173 @@
+ // função para mostrar e ocultar o menu hamburger dos telefones
+  
+ function clickMenu() {
+  if(itens.style.display == 'block' ) {
+      itens.style.display = 'none'
+  } else {
+      itens.style.display = 'block'
+  }
+}
+
+
 // Lista de produtos
 const inventario = [
     {
       nome: "Antonio Bandeiras",
       descricao: "eau de parfum",
-      preco: "25.000,00 kz",
+      categoria: "perfumes",
+      preco: "10.000,00 kz",
       imagem: "../imgs/ab-foto-g.jpg",
     },
     {
       nome: "Dolores P. Femme",
       descricao: "eau de parfum",
-      preco: "20.000,00 kz",
+      categoria: "perfumes",
+      preco: "15.000,00 kz",
       imagem: "../imgs/dlr-foto-g.jpg",
     },
     {
       nome: "Zara Man",
       descricao: "eau de parfum",
-      preco: "10.000,00 kz",
+      categoria: "perfumes",
+      preco: "20.000,00 kz",
       imagem: "../imgs/zr-foto-g.jpg",
     },
     {
       nome: "Gentle Magic",
-      descricao: "skincare",
-      preco: "25.000,00 kz",
+      descricao: "skin serum",
+      categoria: "skincare",
+      preco: "6.000,00 kz",
       imagem: "../imgs/gm2-foto-g.jpg",
     },
     {
       nome: "Yves Rocher",
-      descricao: "skincare",
-      preco: "10.000,00 kz",
+      descricao: "Creme",
+      categoria: "skincare",
+      preco: "5.500,00 kz",
       imagem: "../imgs/yr-foto-g.jpg",
     },
     {
       nome: "Bebeauty",
-      descricao: "skincare",
-      preco: "20.000,00 kz",
+      descricao: "skin gel",
+      categoria: "skincare",
+      preco: "7.000,00 kz",
       imagem: "../imgs/bb-foto-g.jpg",
     },
     {
       nome: "Zara Man",
       descricao: "eau de parfum",
-      preco: "10.000,00 kz",
+      categoria: "perfumes",
+      preco: "15.000,00 kz",
       imagem: "../imgs/zr2-foto-g.jpg",
     },
     {
       nome: "Yves Rocher 2",
-      descricao: "skincare",
-      preco: "25.000,00 kz",
+      descricao: "Creme",
+      categoria: "skincare",
+      preco: "4.000,00 kz",
       imagem: "../imgs/yr2-foto-g.jpg",
     }
   ];
   
-  // Função para adicionar produtos dinamicamente ao HTML
-  function adicionarProdutos(categoria) {
-    const produtosSection = document.querySelector(".produtos-disponiveis");
-  
-    inventario.forEach((produto) => {
-        if (produto.descricao === categoria) {
-            // Criar uma nova seção para o produto
-            const produtoSection = document.createElement("section");
-            produtoSection.classList.add("produto");
-  
-            // Adicionar um ID único para cada seção de produto
-            produtoSection.id = `produto-${inventario.indexOf(produto) + 1}`;
-  
-            // Criar a estrutura HTML para o produto
-            produtoSection.innerHTML = `
-                <picture>
-                    <img src="${produto.imagem}" alt="${produto.nome}">
-                </picture>
-                <h4 class="nome">${produto.nome}</h4>
-                <p class="descricao">${produto.descricao}</p>
-                <p class="preco">${produto.preco}</p>
-            `;
-  
-            // Adicionar o produto à seção de produtos
-            produtosSection.appendChild(produtoSection);
-        }
-    });
-  }
-  
-  // Função para ordenar produtos por preço
-  function ordenarPorPreco(categoria, ordem) {
-    const produtosSection = document.querySelector(".produtos-disponiveis");
-  
-    // Ordenar o inventário de acordo com a ordem especificada
-    inventario.sort((a, b) => {
-        if (ordem === 'asc') {
-            return parseFloat(a.preco.replace(/[^\d.-]/g, '')) - parseFloat(b.preco.replace(/[^\d.-]/g, ''));
-        } else {
-            return parseFloat(b.preco.replace(/[^\d.-]/g, '')) - parseFloat(a.preco.replace(/[^\d.-]/g, ''));
-        }
-    });
-  
-    // Limpar a seção de produtos
-    produtosSection.innerHTML = '';
-  
-    // Adicionar produtos ordenados à seção de produtos
-    inventario.forEach((produto) => {
-        if (produto.descricao === categoria) {
-            // Criar uma nova seção para o produto
-            const produtoSection = document.createElement("section");
-            produtoSection.classList.add("produto");
-  
-            // Adicionar um ID único para cada seção de produto
-            produtoSection.id = `produto-${inventario.indexOf(produto) + 1}`;
-  
-            // Criar a estrutura HTML para o produto
-            produtoSection.innerHTML = `
-                <picture>
-                    <img src="${produto.imagem}" alt="${produto.nome}">
-                </picture>
-                <h4 class="nome">${produto.nome}</h4>
-                <p class="descricao">${produto.descricao}</p>
-                <p class="preco">${produto.preco}</p>
-            `;
-  
-            // Adicionar o produto à seção de produtos
-            produtosSection.appendChild(produtoSection);
-        }
-    });
-  }
-  
-  // Função para exibir produtos em uma página específica
-  function exibirProdutosPorPagina(categoria, paginaAtual, itensPorPagina) {
-    const produtosSection = document.querySelector(".produtos-disponiveis");
-  
-    // Limpar a seção de produtos
-    produtosSection.innerHTML = '';
-  
-    const startIndex = (paginaAtual - 1) * itensPorPagina;
-    const endIndex = startIndex + itensPorPagina;
-    const produtosPorPagina = inventario.filter(produto => produto.descricao === categoria).slice(startIndex, endIndex);
-  
-    // Adicionar produtos à seção de produtos
-    produtosPorPagina.forEach((produto) => {
-        // Criar uma nova seção para o produto
-        const produtoSection = document.createElement("section");
-        produtoSection.classList.add("produto");
-  
-        // Adicionar um ID único para cada seção de produto
-        produtoSection.id = `produto-${inventario.indexOf(produto) + 1}`;
-  
-        // Criar a estrutura HTML para o produto
-        produtoSection.innerHTML = `
-            <picture>
-                <img src="${produto.imagem}" alt="${produto.nome}">
-            </picture>
-            <h4 class="nome">${produto.nome}</h4>
-            <p class="descricao">${produto.descricao}</p>
-            <p class="preco">${produto.preco}</p>
-        `;
-  
-        // Adicionar o produto à seção de produtos
-        produtosSection.appendChild(produtoSection);
-    });
-  }
-  
-  // Função de busca
-  const formBusca = document.getElementById('iFormBusca');
-  formBusca.addEventListener('submit', function (event) {
-      event.preventDefault(); // Evita o envio do formulário padrão
-      const termoBusca = document.getElementById('buscar').value.trim().toLowerCase(); // Obtém o termo de busca e limpa espaços em branco e converte para minúsculas
-  
-      // Filtrar produtos que correspondem ao termo de busca
-      const produtosFiltrados = inventario.filter(produto => {
-          const nomeProduto = produto.nome.toLowerCase(); // Convertendo o nome do produto para minúsculas
-          const descricaoProduto = produto.descricao.toLowerCase(); // Convertendo a descrição do produto para minúsculas
-          return nomeProduto.includes(termoBusca) || descricaoProduto.includes(termoBusca);
-      });
-  
-      // Exibir resultados da busca
-      const produtosSection = document.querySelector('.produtos-disponiveis');
-      produtosSection.innerHTML = produtosFiltrados.length > 0 ? 
-          produtosFiltrados.map(produto => `
-              <section class="produto" id="produto-${inventario.indexOf(produto) + 1}">
-                  <picture>
-                      <img src="${produto.imagem}" alt="${produto.nome}">
-                  </picture>
-                  <h4 class="nome">${produto.nome}</h4>
-                  <p class="descricao">${produto.descricao}</p>
-                  <p class="preco">${produto.preco}</p>
-              </section>
-          `).join('') :
-          '<p>Nenhum resultado encontrado.</p>';
+
+// Função para adicionar produtos dinamicamente ao HTML
+function adicionarProdutos(categoria) {
+  const produtosSection = document.querySelector(".produtos-disponiveis");
+
+  inventario.forEach((produto) => {
+    if (produto.categoria === categoria) {
+      const produtoSection = document.createElement("section");
+      produtoSection.classList.add("produto");
+      produtoSection.innerHTML = `
+        <picture>
+          <img src="${produto.imagem}" alt="${produto.nome}">
+        </picture>
+        <h4 class="nome">${produto.nome}</h4>
+        <p class="descricao">${produto.descricao}</p>
+        <p class="categoria">${produto.categoria}</p>
+        <p class="preco">${produto.preco}<p>
+      `;
+      produtosSection.appendChild(produtoSection);
+    }
   });
-  
-  // Chamar a função para adicionar os produtos ao carregar a página
-  window.addEventListener("load", () => {
-    adicionarProdutos("eau de parfum");
-    adicionarProdutos("skincare");
+}
+
+
+
+
+// Função para filtrar produtos por categoria
+function filtrarPorCategoria(categoria) {
+  const produtosSection = document.querySelector(".produtos-disponiveis");
+  produtosSection.innerHTML = '';
+
+  inventario.forEach((produto) => {
+    if (categoria === 'todos' || produto.categoria === categoria) {
+      const produtoSection = document.createElement("section");
+      produtoSection.classList.add("produto");
+      produtoSection.innerHTML = `
+        <picture>
+          <img src="${produto.imagem}" alt="${produto.nome}">
+        </picture>
+        <h4 class="nome">${produto.nome}</h4>
+        <p class="descricao">${produto.descricao}</p>
+        <p class="categoria">${produto.categoria}</p>
+        <p class="preco">${produto.preco}<p>
+      `;
+      produtosSection.appendChild(produtoSection);
+    }
   });
+}
+
+
+
+// Chamando as funções para adicionar, ordenar e filtrar produtos ao carregar a página
+window.addEventListener("load", function(){
+  adicionarProdutos("perfumes");
+  adicionarProdutos("skincare");
+  ordenarPorCategoria("perfumes");
+  ordenarPorCategoria("skincare");
+  filtrarPorCategoria("perfumes");
+  filtrarPorCategoria("skincare");
+});
+
+
+
+
+// Função para buscar produtos
+function buscarProdutos(termo) {
+  const produtosFiltrados = inventario.filter((produto) =>
+    produto.nome.toLowerCase().includes(termo.toLowerCase())
+  );
+
+  const produtosSection = document.querySelector(".produtos-disponiveis");
+  produtosSection.innerHTML = '';
+
+  produtosFiltrados.forEach((produto) => {
+    const produtoSection = document.createElement("section");
+    produtoSection.classList.add("produto");
+    produtoSection.innerHTML = `
+      <picture>
+        <img src="${produto.imagem}" alt="${produto.nome}">
+      </picture>
+      <h4 class="nome">${produto.nome}</h4>
+      <p class="descricao">${produto.descricao}</p>
+      <p class="categoria">${produto.categoria}</p>
+      <p class="preco">${produto.preco}<p>
+    `;
+    produtosSection.appendChild(produtoSection);
+  });
+}
+
+
+
+// Adicionando evento de busca ao formulário
+const formBusca = document.getElementById("iFormBusca");
+formBusca.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const termo = document.getElementById("buscar").value;
+  buscarProdutos(termo);
+});
   
-  ordenarPorPreco("eau de parfum", "asc");
-  exibirProdutosPorPagina("eau de parfum", 1, 4); 
-  // Exibir os produtos da categoria "eau de parfum" na página 1, com 4 itens por página
   
   
   
@@ -204,12 +178,10 @@ const inventario = [
   
   
   
+
+
   
-  
-  
-  
-  
-  
+  /*
   // Função para exibir detalhes do produto em uma janela modal
   function exibirDetalhesProduto(produtoId) {
     const produto = inventario[produtoId - 1]; // Supondo que o ID do produto corresponda ao seu índice no inventário
@@ -367,18 +339,6 @@ const inventario = [
   function recomendarProdutos(usuarioId) {
     // Lógica para recomendar produtos com base no histórico de navegação do usuário (pode ser integrado com um backend)
   }
-  
-  
-  
-  /*-------------------------------------------------------------------------------------------------------------*/
-  // função para mostrar e ocultar o menu hamburger dos telefones
-  
-  function clickMenu() {
-      if(itens.style.display == 'block' ) {
-          itens.style.display = 'none'
-      } else {
-          itens.style.display = 'block'
-      }
-  }
-  /*------------------------------------------------------------------------------------------------------------*/
+
+*/
   

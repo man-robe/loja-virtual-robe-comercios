@@ -1,3 +1,14 @@
+// Função para mostrar e ocultar o menu hamburger dos telefones
+function clickMenu() {
+  const itens = document.getElementById('itens');
+  if (itens.style.display === 'block') {
+    itens.style.display = 'none';
+  } else {
+    itens.style.display = 'block';
+  }
+}
+
+
 // Lista de produtos
 const inventario = [
   {
@@ -50,6 +61,7 @@ const inventario = [
   }
 ];
 
+
 // Função para adicionar produtos dinamicamente ao HTML
 function adicionarProdutos(categoria) {
   const produtosSection = document.querySelector(".produtos");
@@ -70,6 +82,7 @@ function adicionarProdutos(categoria) {
     }
   });
 }
+
 
 
 
@@ -97,18 +110,6 @@ function filtrarPorCategoria(categoria) {
 
 
 
-
-
-// Função para mostrar e ocultar o menu hamburger dos telefones
-function clickMenu() {
-  const itens = document.getElementById('itens');
-  if (itens.style.display === 'block') {
-    itens.style.display = 'none';
-  } else {
-    itens.style.display = 'block';
-  }
-}
-
 // Chamando as funções para adicionar, ordenar e filtrar produtos ao carregar a página
 window.addEventListener("load", function(){
   adicionarProdutos("perfumes");
@@ -117,4 +118,41 @@ window.addEventListener("load", function(){
   ordenarPorCategoria("skincare");
   filtrarPorCategoria("perfumes");
   filtrarPorCategoria("skincare");
+});
+
+
+
+
+// Função para buscar produtos
+function buscarProdutos(termo) {
+  const produtosFiltrados = inventario.filter((produto) =>
+    produto.nome.toLowerCase().includes(termo.toLowerCase())
+  );
+
+  const produtosSection = document.querySelector(".produtos");
+  produtosSection.innerHTML = '';
+
+  produtosFiltrados.forEach((produto) => {
+    const produtoSection = document.createElement("section");
+    produtoSection.classList.add("produto");
+    produtoSection.innerHTML = `
+      <picture>
+        <img src="${produto.imagem}" alt="${produto.nome}">
+      </picture>
+      <h4 class="nome">${produto.nome}</h4>
+      <p class="descricao">${produto.descricao}</p>
+      <p class="categoria">${produto.categoria}</p>
+    `;
+    produtosSection.appendChild(produtoSection);
+  });
+}
+
+
+
+// Adicionando evento de busca ao formulário
+const formBusca = document.getElementById("iFormBusca");
+formBusca.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const termo = document.getElementById("buscar").value;
+  buscarProdutos(termo);
 });
