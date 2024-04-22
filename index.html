@@ -46,12 +46,12 @@
            <div class="categorias">
                 
             <label for="filtro-categoria">Filtrar por Categorias :</label>
-            <select id="filtro-categoria">
+            <select id="filtro-categoria" onchange="filtrarPorCategoria(this.value)">
                 <option value="todos"> Todos </option>
                 <option value="perfumes">perfumes</option>
                 <option value="skincare">skincare</option>
-            </select>
-
+              </select>
+              
              
             <div class="paginacao">
                 <button class="proxima"><a href="pag-menu/disponiveis.html" target="_self" referrerpolicy="noreferrer">Próxima &gt;&gt;</a></button>
