@@ -59,6 +59,54 @@ const inventario = [
       descricao: "Creme",
       categoria: "skincare",
       imagem: "../imgs/yr2-foto-p.jpg",
+    },
+    {
+      nome: "Antonio Bandeiras",
+      descricao: "eau de parfum",
+      categoria: "perfumes",
+      imagem: "../imgs/ab-foto-p.jpg",
+    },
+    {
+      nome: "Dolores P. Femme",
+      descricao: "eau de parfum",
+      categoria: "perfumes",
+      imagem: "../imgs/dlr-foto-p.jpg",
+    },
+    {
+      nome: "Zara Man",
+      descricao: "eau de parfum",
+      categoria: "perfumes",
+      imagem: "../imgs/zr-foto-p.jpg",
+    },
+    {
+      nome: "Gentle Magic",
+      descricao: "skin serum",
+      categoria: "skincare",
+      imagem: "../imgs/gm2-foto-p.jpg",
+    },
+    {
+      nome: "Yves Rocher",
+      descricao: "Creme",
+      categoria: "skincare",
+      imagem: "../imgs/yr-foto-g.jpg",
+    },
+    {
+      nome: "Bebeauty",
+      descricao: "skin gel",
+      categoria: "skincare",
+      imagem: "../imgs/bb-foto-p.jpg",
+    },
+    {
+      nome: "Zara 2",
+      descricao: "eau de parfum",
+      categoria: "perfumes",
+      imagem: "../imgs/zr2-foto-p.jpg",
+    },
+    {
+      nome: "Yves Rocher 2",
+      descricao: "Creme",
+      categoria: "skincare",
+      imagem: "../imgs/yr2-foto-p.jpg",
     }
   ];
   
@@ -152,7 +200,7 @@ formBusca.addEventListener('submit', function (event) {
 document.addEventListener('DOMContentLoaded', function() {
   const items = [
       { image: '../imgs/ab-foto-p.jpg', title: 'António Bandeiras', description: 'eau de parfum' },
-      { image: '../imgs/bb-foto-p.jpg', title: 'Bebeauty', description: 'Skin Gel' },
+      { image: '../imgs/bb-foto-p.jpg', title: 'Bebeauty', description: 'skin Gel' },
       { image: '../imgs/gm2-foto-p.jpg', title: 'Gentle magic', description: 'skin serum' },
       { image: '../imgs/zr2-foto-p.jpg', title: 'Zara Man', description: 'eau de parfum' },
       { image: '../imgs/yr2-foto-p.jpg', title: 'Yves Rocher ', description: 'Creme' },

@@ -318,8 +318,9 @@ option {
 
 
 .paginacao {
-    margin-top: 20px;
     padding: 10px;
+    margin-top: -10px;
+    margin-bottom: -10px;
     text-align: center;
    
 }
@@ -327,8 +328,8 @@ option {
 
 .proxima, .anterior {
     margin-top: 10px;
-    margin-left: 2.5px;
-    margin-right: 2.5px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-bottom: 10px;
     background-color: rgb(40, 40, 40);
     border: none;
@@ -342,7 +343,8 @@ option {
     text-align: center;
     text-decoration: none;
     color:#ccc;
-    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
   
 
@@ -360,7 +362,7 @@ footer {
     background-color: #161616;
     color: #fff;
     padding: 30px 0;
-    margin-top: -40px;
+
 }
 
 footer h4 {
@@ -1206,7 +1208,6 @@ a img {
     max-width: 100%;
     position: relative;
     margin-top: 20px;
-    margin-bottom: 40px;
     text-align: center;
 }
 
@@ -1291,11 +1292,11 @@ a img {
 }
 
 .prev {
-    left: 10px;
+    left: 3px;
 }
 
 .next {
-    right: 10px;
+    right: 3px;
 }
 
 .prev:hover, .next:hover {

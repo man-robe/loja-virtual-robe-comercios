@@ -321,7 +321,7 @@ option {
 
 
 .paginacao {
-    margin-top: 20px;
+    margin-top: 25px;
     text-align: center;
    
 }
@@ -335,16 +335,15 @@ option {
     border: none;
     padding: 5px;
     border-radius: 5px;
-      
-  }
+}
   
   
 .proxima a, .anterior a {
     text-align: center;
     text-decoration: none;
-    
     color:#ccc;
-    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
   
 

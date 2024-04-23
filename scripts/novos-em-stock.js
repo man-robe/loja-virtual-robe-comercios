@@ -58,6 +58,54 @@ const inventario = [
     descricao: "Creme",
     categoria: "skincare",
     imagem: "../imgs/yr2-foto-g.jpg",
+  },
+  {
+    nome: "Antonio Bandeiras",
+    descricao: "eau de parfum",
+    categoria: "perfumes",
+    imagem: "../imgs/ab-foto-g.jpg",
+  },
+  {
+    nome: "Dolores P. Femme",
+    descricao: "eau de parfum",
+    categoria: "perfumes",
+    imagem: "../imgs/dlr-foto-g.jpg",
+  },
+  {
+    nome: "Zara Man",
+    descricao: "eau de parfum",
+    categoria: "perfumes",
+    imagem: "../imgs/zr-foto-g.jpg",
+  },
+  {
+    nome: "Gentle Magic",
+    descricao: "serum",
+    categoria: "skincare",
+    imagem: "../imgs/gm2-foto-g.jpg",
+  },
+  {
+    nome: "Yves Rocher",
+    descricao: "Creme",
+    categoria: "skincare",
+    imagem: "../imgs/yr-foto-g.jpg",
+  },
+  {
+    nome: "Bebeauty",
+    descricao: "skin gel",
+    categoria: "skincare",
+    imagem: "../imgs/bb-foto-g.jpg",
+  },
+  {
+    nome: "Zara Man",
+    descricao: "eau de parfum",
+    categoria: "perfumes",
+    imagem: "../imgs/zr2-foto-g.jpg",
+  },
+  {
+    nome: "Yves Rocher 2",
+    descricao: "Creme",
+    categoria: "skincare",
+    imagem: "../imgs/yr2-foto-g.jpg",
   }
 ];
 
