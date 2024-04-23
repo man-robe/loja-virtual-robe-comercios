@@ -266,6 +266,14 @@ main {
     color: #1e8122;
 }
 
+.categoria {
+    padding:5px;
+    font-weight: 500;
+    color: #1e8122;
+}
+
+
+
 .descricao {
     font-weight: 450;
     color:#c74200;
