@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Robé-Comércios é sua loja online para produtos de beleza. Encontre perfumes, skincare e muito mais.">
     <title>ROBÉ-COMÉRCIOS</title>
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,7 +16,7 @@
             <h1 class="logo">ROBÉ-COMÉRCIOS</h1>
             <div>
                 <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
-                <nav class="menu" id="itens">
+                <menu class="menu" id="itens">
                     <ul>
                         <li><a href="pag-menu/disponiveis.html" target="_blank" rel="noopener noreferrer">Produtos disponíveis</a></li>
                         <li><a href="pag-menu/mais-vendidos.html" target="_blank" rel="noopener noreferrer">Mais vendidos</a></li>
@@ -25,12 +24,12 @@
                         <li><a href="pag-menu/contato.html">Contato</a></li>
                         <li><a href="pag-menu/sobre.html">Sobre</a></li>
                     </ul>
-                </nav>
+                </menu>
             </div>
         </div>
     </header>
     <main>
-        <section class="conteudo-principal">
+        <div class="conteiner">
             <div class="ibusca">
                 <form class="FormBusca" id="iFormBusca">
                     <label for="buscar"></label>
@@ -40,21 +39,27 @@
                 </form>
             </div>
             <h2 class="pPrin">Produtos</h2>
-            <section class="produtos">
-               
+           <section class="produtos">
+
             </section>
-            <section class="categorias">
-                <label for="filtro-categoria">Filtrar por Categorias :</label>
-                <select id="filtro-categoria" onchange="filtrarPorCategoria(this.value)">
-                    <option value="todos"> Todos </option>
-                    <option value="perfumes">perfumes</option>
-                    <option value="skincare">skincare</option>
-                </select>
-                <div class="paginacao">
-                    <button class="proxima"><a href="pag-menu/disponiveis.html" target="_self" referrerpolicy="noreferrer">Próxima &gt;&gt;</a></button>
-                </div>
-            </section>
-        </section>
+
+           <div class="categorias">
+                
+            <label for="filtro-categoria">Filtrar por Categorias :</label>
+            <select id="filtro-categoria" onchange="filtrarPorCategoria(this.value)">
+                <option value="todos"> Todos </option>
+                <option value="perfumes">perfumes</option>
+                <option value="skincare">skincare</option>
+            </select>
+              
+             
+            <div class="paginacao">
+                <button class="proxima"><a href="pag-menu/disponiveis.html" target="_self" referrerpolicy="noreferrer">Próxima &gt;&gt;</a></button>
+            </div>
+
+        </div>
+
+        </div>
     </main>
     <footer>
         <div class="contentor01">
@@ -63,27 +68,17 @@
                     <h4>Sobre Nós</h4>
                     <p>Tudo o que precisa em um único lugar. | Missão, visão e valores.</p>
                 </div>
-                <nav class="col-md-02">
+                <div class="col-md-02">
                     <h4>Links Rápidos</h4>
                     <ul>
                         <li><a href="pag-menu/disponiveis.html" target="_blank" rel="noopener noreferrer">Produtos disponíveis</a></li>
                         <li><a href="pag-menu/mais-vendidos.html" target="_blank" rel="noopener noreferrer">Mais vendidos</a></li>
                         <li><a href="pag-menu/novos-em-stock.html" target="_blank" rel="noopener noreferrer">Novos em Stock</a></li>
+                        <li><a href="pag-menu/contato.html" target="_blank" rel="noopener noreferrer">Contato</a></li>
                         <li><a href="pag-menu/sobre.html" target="_blank" rel="noopener noreferrer">Sobre</a></li>
-                        <div class="col-md-04">
-                            <ul>
-                                <li>
-                                    <h4>Contato</h4>
-                                </li>
-                                <li>Email: robecomercios@gmail.com</li>
-                                <li>Telefone: +244 922987493</li>
-                                <li>Endereço: Av. Principal, Número 123</li>
-                            </ul>
-                        </div>
-                       
                     </ul>
-                </nav>
-                <nav class="col-md-03">
+                </div>
+                <div class="col-md-03">
                     <h4>Siga-nos</h4>
                     <ul class="social-icons">
                         <li><a href="https://www.facebook.com/man.rhobe/" target="_blank" rel="noopener noreferrer" class="facebook"><img src="icons/icone-facebook.png" alt="Facebook"></a></li>
@@ -91,21 +86,18 @@
                         <li><a href="https://www.instagram.com/_man.robe_/" target="_blank" rel="noopener noreferrer" class="instagram"><img src="icons/icone-instagram.png" alt="Instagram"></a></li>
                         <li><a href="https://github.com/man-robe/" target="_blank" rel="noopener noreferrer" class="github"><img src="icons/icone-github.png" alt="GitHub"></a></li>
                     </ul>
-                </nav>
+                </div>
             </div>
         </div>
-        <footer class="footer-bottom">
+        <div class="footer-bottom">
             <div class="contentor02">
                 <div class="linha02">
-
-                </div>
-                <div class="linha02">
-                    <div class="col-md-05">
+                    <div class="col-md-04">
                         <p>&copy; 2024 ROBÉ-COMÉRCIOS. <br> Todos os direitos reservados. <br> | Designed by Man Robé |</p>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
     </footer>        
 </body>
 </html>

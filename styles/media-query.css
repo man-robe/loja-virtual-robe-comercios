@@ -178,7 +178,7 @@
         font-size: 1em;
     }
 
-    .conteudo-principal {
+    .conteiner {
 
         width: 100%;
         margin: auto;
@@ -401,7 +401,7 @@
 
 
    
-    .conteudo-principal {
+    .conteiner {
 
         width: 100%;
         margin: auto;
@@ -598,7 +598,7 @@
 
     
 
-    .conteudo-principal {
+    .conteiner {
         width: 100%;
       
     }

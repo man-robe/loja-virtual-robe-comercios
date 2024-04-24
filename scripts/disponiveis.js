@@ -321,6 +321,21 @@ formBusca.addEventListener("submit", function(event) {
   
   
   
+  // Função para filtrar produtos por categoria
+  function filtrarPorCategoria(categoria) {
+    const produtosSection = document.querySelector(".produtos-disponiveis");
+    produtosSection.innerHTML = ''; // Limpar os produtos existentes antes de exibir os filtrados
+  
+    inventario.forEach((produto) => {
+        if (produto.categoria === categoria) {
+            // Criar e adicionar o produto à seção de produtos
+            const produtoSection = criarProdutoSection(produto);
+            produtosSection.appendChild(produtoSection);
+        }
+    });
+  }
+  
+  
   
   
   
