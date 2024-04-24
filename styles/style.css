@@ -118,7 +118,7 @@ menu ul li a:focus-within {
 
 
 
-.conteiner {
+.conteudo-principal {
    width: 100%;
    margin: auto;
    margin-top: -1px;
@@ -388,6 +388,12 @@ footer ul li {
 .col-md-02 a {
     color: lightgray;
     text-decoration: none;
+    
+}
+
+.col-md-04 p {
+    display: inline-block;
+    text-align: left;
 }
 
 .col-md-02 a:hover {
@@ -399,7 +405,7 @@ footer ul li {
     text-decoration: underline;
 }
 
-.col-md-04 {
+.col-md-05 {
     height: 10vh;
     margin-top: -10px;
     margin-bottom: 5px;
