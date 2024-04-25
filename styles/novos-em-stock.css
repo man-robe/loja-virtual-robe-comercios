@@ -242,7 +242,7 @@ main {
     text-align: center; 
     background-color: #fff; 
     border-radius: 10px;
-    border: 1px solid #fc9c1f;
+    border: 1px solid #ffe1bb;
   
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     transition: all 0.3s ease; 
@@ -269,7 +269,7 @@ main {
 
 .descricao {
     font-weight: 450;
-    color:#c74200;
+    color:#b04300;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -607,7 +607,7 @@ a img {
 
     .descricao {
 
-        color:#c74200;
+        color:#b04300;
         font-size: 1rem;
     
     }
@@ -803,7 +803,7 @@ a img {
    
     .descricao {
 
-        color:#c74200;
+        color:#b04300;
         font-size: 1.1em;
         
     }
@@ -1101,7 +1101,7 @@ a img {
    
     .descricao {
 
-        color:#c74200;
+        color:#b04300;
         font-size: 1.1em;
        
     }

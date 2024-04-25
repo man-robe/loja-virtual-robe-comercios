@@ -73,8 +73,8 @@
         padding: 8px;
         text-decoration: none;
         text-align: center;
-        background-color:#161616;
-        color:#fc9c1f;
+        background-color:black;
+        color:whitesmoke;
         margin-top: 5px;
         margin-bottom: 5px;
         margin-right: 5px;
@@ -84,7 +84,7 @@
     }
     
     .menu ul li a:hover {
-        color:#f77331;
+        color:#ffa42e;
         background-color:black;
         border-radius: 8px;
     
@@ -168,7 +168,7 @@
     .descricao {
 
         color:#b04300;
-        font-size: 1rem;
+        font-size: 1em;
     
     }
 
@@ -296,8 +296,8 @@
         padding: 8px;
         text-decoration: none;
         text-align: center;
-        background-color:#161616;
-        color:#fc9c1f;
+        background-color:black;
+        color:whitesmoke;
         margin-top: 5px;
         margin-bottom: 5px;
         margin-right: 5px;
@@ -307,7 +307,7 @@
     }
     
     .menu ul li a:hover {
-        color:#f77331;
+        color:#ffa42e;
         background-color:black;
         border-radius: 8px;
     
@@ -559,8 +559,8 @@
         padding: 8px;
         text-decoration: none;
         text-align: center;
-        background-color:#161616;
-        color:#fc9c1f;
+        background-color:black;
+        color:whitesmoke;
         margin-top: 5px;
         margin-bottom: 5px;
         margin-right: 5px;
@@ -571,7 +571,7 @@
     
     
     .menu ul li a:hover {
-        color:#f77331;
+        color:#ffa42e;
         background-color:black;
         border-radius: 8px;
     
@@ -677,6 +677,8 @@
         font-size: 1.1em;
        
     }
+
+   
 
 
     .preco {

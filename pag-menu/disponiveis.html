@@ -47,8 +47,19 @@
                 
             </section>
 
+            <div class="categorias">
+                
+                <label for="filtro-categoria">Filtrar por Categoria :</label>
+                <select id="filtro-categoria" onchange="filtrarPorCategoria(this.value)">
+                    <option value="todos"> Todos </option>
+                    <option value="perfumes">perfumes</option>
+                    <option value="skincare">skincare</option>
+                </select>
+
+            </div>
+
             <section class="detalhes-produto">
-                <h2 class="titulo">Detalhes do Produto</h2>
+                <h2 class="deta-pro">Detalhes do Produto</h2>
                 
                 
                 <!-- Conteúdo dos detalhes do produto -->
@@ -67,18 +78,6 @@
             <div id="secaoComentarios">
                 <!-- Os comentários serão adicionados aqui dinamicamente -->
             </div>
-
-            <div class="categorias">
-                
-                <label for="filtro-categoria">Filtrar por Categoria :</label>
-                <select id="filtro-categoria" onchange="filtrarPorCategoria(this.value)">
-                    <option value="todos"> Todos </option>
-                    <option value="perfumes">perfumes</option>
-                    <option value="skincare">skincare</option>
-                </select>
-
-            </div>
-
            
             <div class="paginacao">
                 <button class="anterior"><a href="../index.html" target="_parent" referrerpolicy="noreferrer">&lt;&lt; Anterior</a></button>

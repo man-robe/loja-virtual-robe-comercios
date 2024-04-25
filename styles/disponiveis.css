@@ -242,7 +242,7 @@ main {
     text-align: center; 
     background-color: #fff; 
     border-radius: 10px;
-    border: 1px solid #fc9c1f;
+    border: 1px solid #ffe1bb;
   
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     transition: all 0.3s ease; 
@@ -272,7 +272,7 @@ main {
 .categoria {
     padding: 5px;
     font-weight: 500;
-    color:#4f0000;
+    color:#652101;
 }
 
 
@@ -280,7 +280,7 @@ main {
 
 .descricao {
     font-weight: 450;
-    color:#c74200;
+    color:#b04300;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -302,6 +302,22 @@ main {
 
 }
 
+
+
+.deta-pro {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.2em;
+   
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #0a0a0a;
+    color:#fd712c;
+
+}
 
 
 
@@ -719,7 +735,7 @@ a img {
 
     .descricao {
 
-        color:#c74200;
+        color:#b04300;
         font-size: 1rem;
     
     }
@@ -915,7 +931,7 @@ a img {
    
     .descricao {
 
-        color:#c74200;
+        color:#b04300;
         font-size: 1.1em;
         
     }
@@ -1213,7 +1229,7 @@ a img {
    
     .descricao {
 
-        color:#c74200;
+        color:#b04300;
         font-size: 1.1em;
        
     }
