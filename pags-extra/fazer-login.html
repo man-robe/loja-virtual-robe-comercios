@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-pag-extra.css">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Fazer Login</h1>
+
+    <!-- Formulário para fazer login -->
+    <form id="formularioLogin">
+        <label for="nome-usuario">Nome de Usuário:</label>
+        <input type="text" id="nome-usuario" name="nome-usuario" required>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <button id="botao-login">Login</button>
+    </form>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        // O JavaScript para verificar o login do usuário vai aqui
+	// Função para verificar o login do usuário
+function verificarLogin() {
+    // Captura os dados do formulário
+    var nomeUsuario = document.getElementById("nome-usuario").value;
+    var senha = document.getElementById("senha").value;
+
+    // Simula a verificação do login (você pode integrar com um backend aqui)
+    if (nomeUsuario === "usuario" && senha === "senha123") {
+        alert("Login bem-sucedido!");
+        // Redireciona o usuário para a página inicial, por exemplo:
+        // window.location.href = "pagina-inicial.html";
+    } else {
+        alert("Nome de usuário ou senha incorretos. Por favor, tente novamente.");
+    }
+}
+
+// Adiciona um evento de clique ao botão de login
+document.addEventListener("DOMContentLoaded", function() {
+    var botaoLogin = document.getElementById("botao-login");
+    botaoLogin.addEventListener("click", function(event) {
+        event.preventDefault(); // Evita que o formulário seja enviado por padrão
+        verificarLogin();
+    });
+});
+
+    </script>
+</body>
+</html>

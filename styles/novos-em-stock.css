@@ -236,12 +236,13 @@ main {
     width: calc(49.33% - 20px);
     margin-top: 10px;
     margin-bottom: 20px;
-    padding: 10px; 
+    padding: 8px; 
     margin-left: 11px;
     margin-right: 11px;
     text-align: center; 
     background-color: #fff; 
-    border-radius: 10px; 
+    border-radius: 10px;
+    border: 1px solid #fc9c1f;
   
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     transition: all 0.3s ease; 

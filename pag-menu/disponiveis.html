@@ -47,6 +47,27 @@
                 
             </section>
 
+            <section class="detalhes-produto">
+                <h2 class="titulo">Detalhes do Produto</h2>
+                
+                
+                <!-- Conteúdo dos detalhes do produto -->
+            </section>
+    
+            <!-- Formulário para adicionar avaliação e comentário -->
+            <form id="formularioAvaliacaoComentario">
+                <label for="avaliacao">Avaliação:</label>
+                <input type="number" id="avaliacao" name="avaliacao" min="1" max="5" required>
+                <label for="comentario">Comentário:</label>
+                <textarea id="comentario" name="comentario" rows="4" cols="50" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+    
+            <!-- Seção para exibir os comentários -->
+            <div id="secaoComentarios">
+                <!-- Os comentários serão adicionados aqui dinamicamente -->
+            </div>
+
             <div class="categorias">
                 
                 <label for="filtro-categoria">Filtrar por Categoria :</label>
@@ -103,5 +124,17 @@
             </div>
         </div>
     </footer>
+      <!-- Estrutura do modal -->
+      <div id="modalDetalhesProduto" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-nome"></h2>
+            <p class="modal-preco"></p>
+            <p class="modal-descricao"></p>
+        </div>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <!-- Coloque os scripts JavaScript após a definição do modal -->       
 </body>
 </html>

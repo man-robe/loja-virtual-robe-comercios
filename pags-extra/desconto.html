@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-pag-extra.css">
+    <title>Página do Pedido</title>
+</head>
+<body>
+    <h1>Detalhes do Pedido</h1>
+
+    <!-- Formulário para aplicar o cupom de desconto -->
+    <form id="formularioCupom">
+        <label for="cupom">Cupom de Desconto:</label>
+        <input type="text" id="cupom" name="cupom">
+        <button id="aplicar-cupom">Aplicar Cupom</button>
+    </form>
+
+    <!-- Total do pedido -->
+    <p>Total do Pedido: <span id="total">$100.00</span></p>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        // O JavaScript para aplicar o cupom de desconto vai aqui
+	 
+// Função para aplicar o cupom de desconto e recalcular o total do pedido
+function aplicarCupom() {
+    // Captura o código do cupom inserido pelo usuário
+    var cupomInput = document.getElementById("cupom");
+    var cupom = cupomInput.value;
+
+    // Verifica se o cupom é válido e aplica o desconto
+    if (cupom === "DESCONTO10") {
+        // Aplica um desconto de 10%
+        var totalElemento = document.getElementById("total");
+        var total = parseFloat(totalElemento.textContent.replace("$", ""));
+        var desconto = total * 0.1;
+        var novoTotal = total - desconto;
+
+        // Exibe o novo total com desconto
+        totalElemento.textContent = "$" + novoTotal.toFixed(2);
+        alert("Cupom aplicado com sucesso! Desconto de 10% aplicado.");
+    } else {
+        // Exibe uma mensagem de erro se o cupom for inválido
+        alert("Cupom inválido. Por favor, verifique e tente novamente.");
+    }
+}
+
+// Adiciona um evento de clique ao botão de aplicar cupom
+document.addEventListener("DOMContentLoaded", function() {
+    var botaoAplicarCupom = document.getElementById("aplicar-cupom");
+    botaoAplicarCupom.addEventListener("click", function(event) {
+        event.preventDefault(); // Evita que o formulário seja enviado por padrão
+        aplicarCupom();
+    });
+});
+  
+    </script>
+</body>
+</html>

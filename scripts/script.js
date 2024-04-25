@@ -208,3 +208,5 @@ formBusca.addEventListener("submit", function(event) {
   const termo = document.getElementById("buscar").value;
   buscarProdutos(termo);
 });
+
+

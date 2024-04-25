@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-pag-extra.css">
+    <title>Criar Nova Conta</title>
+</head>
+<body>
+    <h1>Criar Nova Conta</h1>
+
+    <!-- Formulário para criar uma nova conta de usuário -->
+    <form id="formularioCriarConta">
+        <label for="nome-usuario">Nome de Usuário:</label>
+        <input type="text" id="nome-usuario" name="nome-usuario" required>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <button id="botao-criar-conta">Criar Conta</button>
+    </form>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        // O JavaScript para criar uma nova conta de usuário vai aqui
+    // Função para criar uma nova conta de usuário
+    function criarConta() {
+        // Captura os dados do formulário
+        var nomeUsuario = document.getElementById("nome-usuario").value;
+        var email = document.getElementById("email").value;
+        var senha = document.getElementById("senha").value;
+
+        // Valida os dados do formulário
+        if (nomeUsuario.trim() === '' || email.trim() === '' || senha.trim() === '') {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+
+        // Simula o envio dos dados para o servidor (você precisará implementar essa parte)
+        // Aqui você pode fazer uma requisição HTTP para um servidor para criar a conta
+        // Por exemplo, usando fetch() ou XMLHttpRequest
+        // Depois de receber a resposta do servidor, você pode manipulá-la aqui
+
+        // Exemplo de manipulação da resposta do servidor (simulado)
+        alert("Conta criada com sucesso para o usuário: " + nomeUsuario);
+    }
+
+    // Adiciona um evento de clique ao botão de criar conta
+    document.addEventListener("DOMContentLoaded", function() {
+        var botaoCriarConta = document.getElementById("botao-criar-conta");
+        botaoCriarConta.addEventListener("click", function(event) {
+            event.preventDefault(); // Evita que o formulário seja enviado por padrão
+            criarConta();
+        });
+    });
+
+    </script>
+</body>
+</html>

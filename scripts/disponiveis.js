@@ -228,6 +228,102 @@ formBusca.addEventListener("submit", function(event) {
   
   
   
+
+
+
+
+
+
+
+
+
+
+
+// Função para exibir os detalhes do produto em uma janela modal
+function exibirDetalhesDoProduto(nome, preco, descricao) {
+  // Seleciona o elemento modal
+  var modal = document.getElementById("modalDetalhesProduto");
+
+  // Seleciona os elementos dentro da modal para exibir os detalhes
+  var modalNome = modal.querySelector(".modal-nome");
+  var modalPreco = modal.querySelector(".modal-preco");
+  var modalDescricao = modal.querySelector(".modal-descricao");
+
+  // Atualiza o conteúdo dos elementos com os detalhes do produto
+  modalNome.textContent = nome;
+  modalPreco.textContent = "Preço:  " + preco;
+  modalDescricao.textContent = "Descrição: " + descricao;
+
+  // Exibe a modal
+  modal.style.display = "block";
+}
+
+// Adiciona um evento de clique aos elementos de produto
+document.addEventListener("DOMContentLoaded", function() {
+  var produtos = document.querySelectorAll(".produto");
+  produtos.forEach(function(produto) {
+      produto.addEventListener("click", function() {
+          // Obtém os detalhes do produto clicado
+          var nome = produto.querySelector(".nome").textContent;
+          var preco = produto.querySelector(".preco").textContent;
+          var descricao = produto.querySelector(".descricao").textContent;
+
+          // Exibe os detalhes do produto em uma modal
+          exibirDetalhesDoProduto(nome, preco, descricao);
+      });
+  });
+
+  // Fecha a modal quando o usuário clicar fora dela
+  var modal = document.getElementById("modalDetalhesProduto");
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+});
+
+
+
+
+// Função para adicionar avaliação e comentário de um produto
+function adicionarAvaliacaoEComentario() {
+  // Captura os valores inseridos pelo usuário nos campos de avaliação e comentário
+  var avaliacao = document.getElementById("avaliacao").value;
+  var comentario = document.getElementById("comentario").value;
+
+  // Cria um novo elemento HTML para exibir a avaliação e o comentário
+  var novoComentario = document.createElement("div");
+  novoComentario.classList.add("comentario");
+  novoComentario.innerHTML = "<p>Avaliação: " + avaliacao + "</p><p>Comentário: " + comentario + "</p>";
+
+  // Adiciona o novo elemento HTML à seção de comentários
+  var secaoComentarios = document.getElementById("secaoComentarios");
+  secaoComentarios.appendChild(novoComentario);
+
+  // Limpa os campos de entrada após a submissão
+  document.getElementById("avaliacao").value = "";
+  document.getElementById("comentario").value = "";
+}
+
+// Adiciona um evento de envio de formulário ao formulário de avaliação e comentário
+document.addEventListener("DOMContentLoaded", function() {
+  var formulario = document.getElementById("formularioAvaliacaoComentario");
+  formulario.addEventListener("submit", function(event) {
+      event.preventDefault(); // Evita que o formulário seja enviado por padrão
+      adicionarAvaliacaoEComentario();
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
   
   
   
@@ -237,7 +333,7 @@ formBusca.addEventListener("submit", function(event) {
 
 
   
-  /*
+/*
   // Função para exibir detalhes do produto em uma janela modal
   function exibirDetalhesProduto(produtoId) {
     const produto = inventario[produtoId - 1]; // Supondo que o ID do produto corresponda ao seu índice no inventário

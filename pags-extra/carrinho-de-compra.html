@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-pag-extra.css">
+    <title>Carrinho de compras</title>
+</head>
+<body>
+    <h1>Lista de Produtos</h1>
+
+    <!-- Exemplo de produto -->
+    <div class="produto">
+        <h2>Nome do Produto</h2>
+        <p>Preço: $19.99</p>
+        <!-- Botão para adicionar ao carrinho -->
+        <button class="adicionar-ao-carrinho" data-nome="Nome do Produto" data-preco="19.99">Adicionar ao Carrinho</button>
+
+	<!-- Botão para remover do carrinho -->
+        <button class="remover-do-carrinho">Remover do Carrinho</button>
+
+    </div>
+
+    <div class="produto">
+        <h2>Nome do Produto</h2>
+        <p>Preço: $19.99</p>
+        <!-- Botão para adicionar ao carrinho -->
+        <button class="adicionar-ao-carrinho" data-nome="Nome do Produto" data-preco="19.99">Adicionar ao Carrinho</button>
+
+	<!-- Botão para remover do carrinho -->
+        <button class="remover-do-carrinho">Remover do Carrinho</button>
+
+    </div>
+
+    <!-- Outros produtos aqui -->
+
+    <!-- Carrinho de compras -->
+    <h2>Carrinho de Compras</h2>
+    <div id="carrinho">
+        <!-- O conteúdo do carrinho será adicionado dinamicamente pelo JavaScript -->
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        // O JavaScript para adicionar produtos ao carrinho vai aqui
+	 
+    // Função para adicionar um produto ao carrinho de compras
+    function adicionarAoCarrinho(nome, preco) {
+        // Crie um objeto representando o produto
+        var produto = {
+            nome: nome,
+            preco: preco,
+            quantidade: 1 // Defina a quantidade inicial como 1
+        };
+
+        // Verifique se já existe um carrinho de compras no armazenamento local
+        var carrinho = localStorage.getItem("carrinho");
+        if (carrinho) {
+            // Se o carrinho já existir, adicione o produto a ele
+            carrinho = JSON.parse(carrinho);
+            carrinho.push(produto);
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        } else {
+            // Se não existir, crie um novo carrinho e adicione o produto a ele
+            carrinho = [produto];
+            localStorage.setItem("carrinho", JSON.stringify(carrinho));
+        }
+
+        // Atualize a exibição do carrinho de compras
+        atualizarCarrinho();
+    }
+
+    // Função para atualizar a exibição do carrinho de compras
+    function atualizarCarrinho() {
+        // Selecione o elemento onde o carrinho será exibido
+        var carrinhoElemento = document.getElementById("carrinho");
+
+        // Limpe o conteúdo atual do carrinho
+        carrinhoElemento.innerHTML = "";
+
+        // Recupere os produtos do carrinho do armazenamento local
+        var carrinho = JSON.parse(localStorage.getItem("carrinho"));
+
+        // Se houver produtos no carrinho, adicione-os ao HTML do carrinho
+        if (carrinho && carrinho.length > 0) {
+            carrinho.forEach(function(produto) {
+                carrinhoElemento.innerHTML += "<p>" + produto.nome + " - Preço: $" + produto.preco + " - Quantidade: " + produto.quantidade + "</p>";
+            });
+        } else {
+            // Se o carrinho estiver vazio, exiba uma mensagem indicando isso
+            carrinhoElemento.innerHTML = "<p>Carrinho vazio</p>";
+        }
+    }
+
+    // Adiciona um evento de clique aos botões de adicionar ao carrinho
+    document.addEventListener("DOMContentLoaded", function() {
+        var botoesAdicionar = document.querySelectorAll(".adicionar-ao-carrinho");
+        botoesAdicionar.forEach(function(botao) {
+            botao.addEventListener("click", function() {
+                // Obtém os detalhes do produto a partir dos atributos HTML
+                var nome = botao.getAttribute("data-nome");
+                var preco = parseFloat(botao.getAttribute("data-preco"));
+                // Chama a função para adicionar o produto ao carrinho
+                adicionarAoCarrinho(nome, preco);
+            });
+        });
+
+        // Atualiza o carrinho de compras quando a página é carregada
+        atualizarCarrinho();
+});
+
+ 
+
+
+  
+  
+    // Função para remover um produto do carrinho de compras
+    function removerDoCarrinho(index) {
+        // Recupera os produtos do carrinho do armazenamento local
+        var carrinho = JSON.parse(localStorage.getItem("carrinho"));
+
+        // Remove o produto do índice especificado
+        carrinho.splice(index, 1);
+
+        // Atualiza o carrinho de compras no armazenamento local
+        localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+        // Atualiza a exibição do carrinho de compras
+        atualizarCarrinho();
+    }
+
+    // Adiciona um evento de clique aos botões de remoção do carrinho
+    document.addEventListener("DOMContentLoaded", function() {
+        var botoesRemover = document.querySelectorAll(".remover-do-carrinho");
+        botoesRemover.forEach(function(botao, index) {
+            botao.addEventListener("click", function() {
+                // Chama a função para remover o produto do carrinho com o índice correspondente
+                removerDoCarrinho(index);
+            });
+        });
+    });
+
+    </script>
+</body>
+</html>

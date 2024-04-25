@@ -221,10 +221,10 @@ main {
 }
 
 .produtos {
-    width: calc(100% - 0px); /* Definir a largura de cada produto (ajustável conforme necessário) */
-    text-align: center; /* Alinhar o conteúdo do produto ao centro */
-    background-color: #fff; /* Cor de fundo do produto*/
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adicionar sombra ao produto */
+    width: calc(100% - 0px); 
+    text-align: center; 
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .produto {
@@ -237,16 +237,18 @@ main {
     width: calc(49.33% - 20px);
     margin-top: 10px;
     margin-bottom: 20px;
-    padding: 10px; 
+    padding: 8px; 
     margin-left: 11px;
     margin-right: 11px;
     text-align: center; 
     background-color: #fff; 
-    border-radius: 10px; 
+    border-radius: 10px;
+    border: 1px solid #fc9c1f;
   
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     transition: all 0.3s ease; 
 }
+
 .produto img {
     width: 150px; /* Garantir que a imagem do produto ocupe toda a largura do produto */
     max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do produto */
@@ -270,7 +272,7 @@ main {
 
 .descricao {
     font-weight: 450;
-    color:#c74200;
+    color:#b04300;
     margin-top: 5px;
     margin-bottom: 5px;
 }
@@ -441,3 +443,6 @@ a img {
     margin: 0;
     text-align: center;
 }
+
+
+
